@@ -2,7 +2,6 @@
 title: Portfolio
 layout: page
 permalink: /portfolio/
-top-nav-order: 1
 group: top-nav
 ---
 

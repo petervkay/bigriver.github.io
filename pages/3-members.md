@@ -1,7 +1,8 @@
 ---
-title: Meet Us
+title: Members
 layout: page
 group: top-nav
+top-nav-order: 3
 permalink: /members/
 ---
 

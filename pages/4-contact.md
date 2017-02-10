@@ -2,6 +2,7 @@
 title: Contact
 layout: page
 group: top-nav
+top-nav-order: 4
 permalink: /contact/
 ---
 

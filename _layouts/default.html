@@ -12,11 +12,11 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <script src="{{ site.baseurl}}/js/three.js/build/three.min.js"></script>
-    <script src="{{ site.baseurl}}/js/D.js/lib/D.min.js"></script>
-    <script src="{{ site.baseurl}}/js/uEvent/uevent.min.js"></script>
-    <script src="{{ site.baseurl}}/js/doT/doT.min.js"></script>
-    <script src="{{ site.baseurl}}/js/Photo-Sphere-Viewer/photo-sphere-viewer.min.js"></script>
+    <script src="{{ site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
+    <script src="{{ site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
+    <script src="{{ site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
+    <script src="{{ site.baseurl}}/js/plugins/doT/doT.min.js"></script>
+    <script src="{{ site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.min.js"></script>
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -61,10 +61,9 @@
 <script>
   var div = document.getElementById('photosphere-background');
   var PSV = new PhotoSphereViewer({
-      panorama: '{{ site.baseurl}}/js/Photo-Sphere-Viewer/examples/snow.jpg',
+      panorama: '{{ site.baseurl}}/js/plugins/Photo-Sphere-Viewer/examples/snow.jpg',
       container: div,
       navbar:true,
       anim_speed: '0rpm'
     });
-    </script>
 </script>

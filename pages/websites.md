@@ -10,10 +10,13 @@ Here's a paragraph.
 
 
 {% comment %}
-{% for tile in site.data.website_tiles %}
-    {% include website_tile
-        website = tile
+{% for tile in site.data.websites %}
+    {% include website_tile.html
+        website = website
     %}
 {% endfor %}
 {% endcomment %}
+
+<script src='{{site.baseurl}}/js/portfolio.js'>
+
 

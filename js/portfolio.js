@@ -1,5 +1,9 @@
 $(document).ready(function(){
-	$('.title').click(function()) {
+	console.log('test');
+	$('.website .title').click(popup);
+	function popup() {
 		alert('test');
-	)};
-)};
+	}
+		
+	
+});

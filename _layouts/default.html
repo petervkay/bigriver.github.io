@@ -34,7 +34,7 @@
           <nav class="top-nav">
             {% for item in site.pages %}
               {% if item.group == "top-nav" %}
-                {% assign class = '' %}
+                {% assign css_class = '' %}
                 {% if page.url == item.url %}
                   {% assign css_class = 'active' %}
                 {% endif %}
@@ -49,15 +49,15 @@
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
-
+    <!--
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+           Don't think footer is necessary in this design
+         </footer>
       </div>
     </div>
-
+    -->
     {% include analytics.html %}
   </body>
 </html>

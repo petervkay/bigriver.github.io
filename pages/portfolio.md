@@ -2,6 +2,7 @@
 title: Portfolio
 layout: page
 permalink: /portfolio/
+group: top-nav
 ---
 
 {% for website in site.data.websites %} 

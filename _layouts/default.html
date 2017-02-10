@@ -12,32 +12,18 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-<script src="{{ site.baseurl}}/js/three.js/build/three.min.js"></script>
-<script src="{{ site.baseurl}}/js/D.js/lib/D.min.js"></script>
-<script src="{{ site.baseurl}}/js/uEvent/uevent.min.js"></script>
-<script src="{{ site.baseurl}}/js/doT/doT.min.js"></script>
-<script src="{{ site.baseurl}}/js/Photo-Sphere-Viewer/photo-sphere-viewer.min.js"></script>
+    <script src="{{ site.baseurl}}/js/three.js/build/three.min.js"></script>
+    <script src="{{ site.baseurl}}/js/D.js/lib/D.min.js"></script>
+    <script src="{{ site.baseurl}}/js/uEvent/uevent.min.js"></script>
+    <script src="{{ site.baseurl}}/js/doT/doT.min.js"></script>
+    <script src="{{ site.baseurl}}/js/Photo-Sphere-Viewer/photo-sphere-viewer.min.js"></script>
 
-<style>
-      html, body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      #main {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-
-
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
+    <div id="photosphere-background">
+    </div>
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
@@ -73,7 +59,7 @@
 </html>
 
 <script>
-  var div = document.getElementById('main');
+  var div = document.getElementById('photosphere-background');
   var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/js/Photo-Sphere-Viewer/examples/snow.jpg',
       container: div,

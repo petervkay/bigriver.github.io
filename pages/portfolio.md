@@ -2,6 +2,7 @@
 title: Portfolio
 layout: page
 permalink: /portfolio/
+group: top-nav
 ---
 
 # Here's a header, in case we want a header

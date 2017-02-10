@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
 
     <script src="{{ site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
     <script src="{{ site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
@@ -27,16 +28,18 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+          <nav class="top-nav">
+            {% for item in site.pages %}
+              {% if item.group == "top-nav" %}
+                {% assign class = '' %}
+                {% if page.url == item.url %}
+                  {% assign css_class = 'active' %}
+                {% endif %}
+                <a href="{{ item.url | absolute_url }}" class="{{ css_class }}">{{ item.title }}</a>
+              {% endif %}
+            {% endfor %}
           </nav>
         </header>
       </div>

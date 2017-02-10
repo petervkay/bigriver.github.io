@@ -4,7 +4,7 @@
 //
 
 // Colors
-$blue: #4183C4;
+$blue: #164DE5;
 
 // Grays
 $black: #000;
@@ -15,9 +15,9 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$sans-font-family: "Source Sans Pro", Helvetica, Trebuchet, sans-serif;
+$serif-font-family: Georgia, serif;
+$sans-bold-weight: 700;
 
 // Mobile breakpoints
 @mixin mobile {

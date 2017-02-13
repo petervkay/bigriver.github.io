@@ -25,3 +25,13 @@ $sans-bold-weight: 700;
     @content;
   }
 }
+// todo: make this work via flexbox instead?
+@mixin fourcol-responsive {
+  width: 23%;
+  margin: 0 1%;
+  float: left;
+  display: inline-block;
+  @include mobile {
+    width: 48%;
+  }
+}

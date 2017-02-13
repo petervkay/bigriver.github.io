@@ -157,6 +157,18 @@ img {
 }
 
 //
+// Includes
+//
+.img_text_tile {
+    @include fourcol-responsive;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 6px;
+    padding: 10px;
+    img {
+        border-radius: 50%;
+    }
+}
+//
 // .masthead
 //
 

@@ -58,11 +58,11 @@ p {
 }
 
 a {
-    color: $blue;
+    color: $link-color;
     text-decoration: none;
     cursor: pointer;
     &:hover, &:active {
-        color: $blue;
+        color: $link-color;
     }
 }
 
@@ -250,13 +250,13 @@ nav.top-nav {
         letter-spacing: 1px;
         transition: .3s color;
         &.active, &:hover {
-            color: $blue;
+            color: $link-color;
             transition: .3s color;
         }
 
         @include mobile {
             margin: 0 10px;
-            color: $blue;
+            color: $link-color;
         }
     }
 }

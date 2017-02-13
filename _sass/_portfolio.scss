@@ -2,5 +2,8 @@
     width: 33%;
     display: inline-block;
     height: 300px;
-    background-repeat: no-repeat
+    /* background image defined inline */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:$trans-white;
  }

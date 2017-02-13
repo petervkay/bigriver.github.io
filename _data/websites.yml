@@ -1,41 +1,34 @@
 lrc:
     url: http://www.livingroomconversations.com
     title: Living Room Conversations
-    image: /assets/images/lrc.jpg
     description: This large project features an advanced Nationbuilder theme and includes some fancy interactive graphics.
 
 mnau:
     url: http://mnacademics.org
     title: MN Academics United
-    image: /assets/images/mnau.jpg
     description: This website was built for SEIU Local 284, which is organizing academics in Minnesota. This Wordpress theme was built using the Betheme framework.
 
 btbl:
     url: http://www.bluelinemn.org
     title: Behind the Blue Line
-    image: /assets/images/btbl.jpg
     description: This website features interviews and photographs with people who have experienced police brutality. We built a customized Wordpress theme that combines a photography gallery with an interactive means for people to navigate through interviews.
 
 15now:
     url: http://www.15nowmn.org
     title: "15 NOW Minnesota"
-    image: /assets/images/15now.jpg
     description: This website was the first full site we built in the Nationbuilder platform using a theme that we custom built to suit the organization's needs. We are excited to do more work with the Nationbuilder platform as it offers small to medium organizations unparalleled tools for managing a support network including integrated email lists, fundraising, and content delivery.
 
 npsy:
     url: http://www.northpsychology.com
     title: North Psychology Clinic
-    image: /assets/images/npsy.jpg
     description: This clinic's old website was outdated, lacking responsiveness to mobile devices. We designed a custom Wordpress theme that modernized many design elements of the old site.
 
 emwb:
     url: http://www.eatmywordsbooks.com
     title: Eat My Words Books
-    image: /assets/images/emwb.jpg
     description: This was a website built extremely quickly and affordably using the Squarespace platform.
 
 nygn:
     url: http://www.nygaardnotes.org
     title: Nygaard Notes
-    image: /assets/images/nygn.jpg
     description: This is a custom theme which allows the author to easily add new issues that are automatically formatted and indexed.

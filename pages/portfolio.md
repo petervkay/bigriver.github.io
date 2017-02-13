@@ -9,6 +9,6 @@ group: top-nav
 {% include website_tile.html website=website %}
 {% endfor %}
 
-<script src='{{site.baseurl}}/js/portfolio.js'></script>
+<!--<script src='{{site.baseurl}}/js/portfolio.js'></script>-->
 
 

@@ -1,34 +1,41 @@
 lrc:
     url: http://www.livingroomconversations.com
+    id: lrc
     title: Living Room Conversations
     description: This large project features an advanced Nationbuilder theme and includes some fancy interactive graphics.
 
 mnau:
     url: http://mnacademics.org
+    id: mnau
     title: MN Academics United
     description: This website was built for SEIU Local 284, which is organizing academics in Minnesota. This Wordpress theme was built using the Betheme framework.
 
 btbl:
     url: http://www.bluelinemn.org
+    id: btbl
     title: Behind the Blue Line
     description: This website features interviews and photographs with people who have experienced police brutality. We built a customized Wordpress theme that combines a photography gallery with an interactive means for people to navigate through interviews.
 
 15now:
     url: http://www.15nowmn.org
+    id: 15now
     title: "15 NOW Minnesota"
     description: This website was the first full site we built in the Nationbuilder platform using a theme that we custom built to suit the organization's needs. We are excited to do more work with the Nationbuilder platform as it offers small to medium organizations unparalleled tools for managing a support network including integrated email lists, fundraising, and content delivery.
 
 npsy:
     url: http://www.northpsychology.com
+    id: npsy
     title: North Psychology Clinic
     description: This clinic's old website was outdated, lacking responsiveness to mobile devices. We designed a custom Wordpress theme that modernized many design elements of the old site.
 
 emwb:
     url: http://www.eatmywordsbooks.com
+    id: emwb
     title: Eat My Words Books
     description: This was a website built extremely quickly and affordably using the Squarespace platform.
 
 nygn:
     url: http://www.nygaardnotes.org
+    id: nygn
     title: Nygaard Notes
     description: This is a custom theme which allows the author to easily add new issues that are automatically formatted and indexed.

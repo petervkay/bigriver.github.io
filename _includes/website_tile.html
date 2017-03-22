@@ -1,7 +1,24 @@
-<div class='website tile' 
-	style='background-image:url("{{site.baseurl}}/images/screenshots/{{include.website[0]}}.png");'
->
-	<div class='title'>
+<div class='website tile'>
+	<img class="siteImage" src="{{site.baseurl}}/images/screenshots/{{include.website[0]}}.png"/>
+	<div class='title' title='{{include.website[1].id}}' onclick="showIframe(event)">
 		{{include.website[1].title}}
 	</div>
+	<div id='{{include.website[1].id}}' onmouseleave="hideIframe(event)" style="display: none;" class="box"><iframe style="position: absolute; z-index: 500; top: 150px; left: 5%; border: 2px outset lightgrey;" src="{{include.website[1].url}}" width = "90%" height = "100%"></iframe></div>
 </div>
+
+<script>
+function showIframe(e) {
+    var x = document.getElementById(e.target.title);
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+		console.log(x.style.display);
+}
+function hideIframe(e) {
+	var x = document.getElementById(e.target.id);
+	x.style.display = 'none';
+	console.log(x.style.display);
+}
+</script>

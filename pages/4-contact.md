@@ -5,9 +5,12 @@ group: top-nav
 permalink: /contact/
 ---
 
-The best way to get in touch with us is at
-[bigriverwebdesign@gmail.com](mailto:bigriverwebdesign@gmail.com). Just send us
-a message about the kind of project that you’re looking to get done, with as
-much detail as you have available. We can do some initial consulting at no
-charge and then come up with a quote for how much we should charge to get your
-product done. Then, we can move forward and get your site done quickly.
+<form id="bigriverform" method="POST"
+      action="https://www.formingo.co/submit/bigriverwebdesign@gmail.com">
+    <input type="text" name="full_name" placeholder="name">
+    <input type="email" name="__replyto" placeholder="email">
+    <input type="text" name="phone_number" placeholder="phone"><br>
+    <textarea placeholder="enter your question or a description of your needs here:" rows="4" cols="63" name="comment" form="bigriverform"></textarea><br>
+    <input type="hidden" name="__redirect" value="https://petervkay.github.io/bigriver.github.io/">
+    <input type="submit" value="Send">
+</form>

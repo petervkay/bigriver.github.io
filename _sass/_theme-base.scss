@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    font-family: 'Source Sans Pro', sans-serif;
     background: $white;
     font: 18px/1.4 $sans-font-family;
     color: $darkGray;
@@ -54,7 +55,7 @@ h4 {
 }
 
 p {
-    margin: 15px 0;
+    color: #72453F;
 }
 
 a {
@@ -159,15 +160,71 @@ img {
 //
 // Includes
 //
+.mosaic {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h5 {
+  margin: 0;
+  font-size: 36px;
+  color: #72453F;
+}
+
+h6 {
+  margin: 0;
+  font-size: 24px;
+  color: #72453F;
+}
+
+.text_tile {
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  padding: 0px 12px 15px 12px;
+  margin: 1%;
+  font-size: 28px;
+  margin-bottom: 3rem;
+}
+
 .img_text_tile {
     @include fourcol-responsive;
     background-color: rgba(255,255,255,.7);
     border-radius: 6px;
     padding: 10px;
+    height: 31rem;
+    margin: 1%;
     img {
         border-radius: 50%;
     }
 }
+
+@media (max-width: 480px) {
+  .mosaic {
+    flex-direction: column;
+  }
+  .img_text_tile {
+    width: 100%;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.bottomText {
+  width: 98%;
+  height: inherit;
+  font-size: 24px;
+  margin-top: 3rem;
+}
+
+.email {
+  color: inherit;
+  text-decoration: underline;
+}
+.email:hover {
+  color: saddlebrown;
+}
+
 //
 // .masthead
 //
@@ -197,7 +254,12 @@ img {
 
     img {
         display: block;
+        margin: 1%;
     }
+}
+
+.img_holder {
+  text-align: center;
 }
 
 .site-info {
@@ -245,12 +307,12 @@ nav.top-nav {
 
     a {
         margin-left: 20px;
-        color: $gray;
+        color: $link-color;
         text-align: right;
         letter-spacing: 1px;
         transition: .3s color;
         &.active, &:hover {
-            color: $link-color;
+            color: $gray;
             transition: .3s color;
         }
 
@@ -259,6 +321,14 @@ nav.top-nav {
             color: $link-color;
         }
     }
+}
+
+div.aboutPage {
+  height: inherit;
+  width: inherit;
+  display: block;
+  float: none;
+  color: #72453F;
 }
 
 //

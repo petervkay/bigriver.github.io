@@ -32,6 +32,11 @@ $trans-white:rgba(255,255,255,.9);
     @content;
   }
 }
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
 // todo: make this work via flexbox instead?
 @mixin fourcol-responsive {
   width: 23%;
@@ -39,6 +44,9 @@ $trans-white:rgba(255,255,255,.9);
   float: left;
   display: inline-block;
   @include mobile {
+    width: 48%;
+  }
+  @include tablet {
     width: 48%;
   }
 }

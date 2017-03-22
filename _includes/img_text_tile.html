@@ -3,8 +3,10 @@
 {% endcomment %}
 
 <div class="img_text_tile">
-  <img src="{{ site.baseurl }}/images/headshots/{{ include.content[0] }}.jpg"
-       alt="{{ include.content[1].imgalt }}" />
+  <div class="img_holder">
+    <img src="{{ site.baseurl }}/images/headshots/{{ include.content[0] }}.jpg"
+         alt="{{ include.content[1].imgalt }}" />
+  </div>
   <div>
     {{ include.content[1].text | markdownify }}
   </div>

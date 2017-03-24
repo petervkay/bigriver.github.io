@@ -3,7 +3,7 @@
 	<div class='title' title='{{include.website[1].id}}' onclick="showIframe(event)">
 		{{include.website[1].title}}
 	</div>
-	<div id='{{include.website[1].id}}' onmouseleave="hideIframe(event)" style="display: none;" class="box"><iframe style="position: fixed; z-index: 500; top: 5%; left: 5%; border: 2px outset lightgrey;" src="https://www.google.com/search?q=%{{include.website[1].url}}&btnI=Im+Feeling+Lucky" width = "90%" height = "90%"></iframe></div>
+	<div id='{{include.website[1].id}}' onmouseleave="hideIframe(event)" style="display: none;" class="box"><iframe style="position: fixed; z-index: 500; top: 5%; left: 5%; border: 2px outset lightgrey;" src="{{include.website[1].url}}" width = "90%" height = "90%"></iframe></div>
 </div>
 
 <script>

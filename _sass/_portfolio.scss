@@ -6,8 +6,6 @@
 .website.tile {
     width: 350px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 260px;
     background-color:$trans-white;
     margin-bottom: 12px;
@@ -23,8 +21,9 @@
 
 .siteImage {
   height: 236px;
-  max-width: 326px;
+  width: 236px;
   position: absolute;
+  margin: 15px 57px;
 }
 
 div.title, div.title > a {

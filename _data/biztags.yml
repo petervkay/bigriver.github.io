@@ -1,0 +1,9 @@
+non-profit:
+  tag: NON-PROFIT
+  tagtype: biztag
+  onclick: showNonProfit(event)
+
+business:
+  tag: BUSINESS
+  tagtype: biztag
+  onclick: showBusiness(event)

@@ -1,0 +1,14 @@
+wordpress:
+  tag: WORDPRESS
+  tagtype: platformtag
+  onclick: showWordpress(event)
+
+squarespace:
+  tag: SQUARESPACE
+  tagtype: platformtag
+  onclick: showSquarespace(event)
+
+nationbuilder:
+  tag: NATIONBUILDER
+  tagtype: platformtag
+  onclick: showNationbuilder(event)

@@ -28,7 +28,7 @@ $trans-white:rgba(255,255,255,.9);
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 695px) {
     @content;
   }
 }

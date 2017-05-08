@@ -157,6 +157,21 @@ img {
     };
 }
 
+#main, .wrapper-masthead {
+    position:absolute;
+    pointer-events: none;
+    max-width:none;
+    width:100%;
+}
+
+.clickable {
+    pointer-events:auto;
+}
+
+#main {
+    top:185px;
+}
+
 //
 // Includes
 //

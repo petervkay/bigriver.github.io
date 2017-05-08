@@ -1,5 +1,5 @@
 .website.tile {
-    width: 33%;
+    @include flexcol(3);
     display: inline-block;
     height: 300px;
     /* background image defined inline */

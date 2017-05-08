@@ -33,8 +33,8 @@ $trans-white:rgba(255,255,255,.9);
   }
 }
 // todo: make this work via flexbox instead?
-@mixin fourcol-responsive {
-  width: 23%;
+@mixin flexcol($columns) {
+  width: (1/$columns)*100%;  //converting number of columns to percent width
   margin: 0 1%;
   float: left;
   display: inline-block;

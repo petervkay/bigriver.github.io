@@ -1,0 +1,7 @@
+{% comment %}
+  text boxes for service page.
+{% endcomment %}
+
+<div class="service_box {{ include.content[0] }}">
+  {{ include.content[1].text | markdownify }}
+</div>

@@ -1,0 +1,67 @@
+.service_box {
+    background-color: rgba(255,255,255,.7);
+    border-radius: 6px;
+    padding: 0px 12px 15px 12px;
+    font-size: 16px;
+}
+
+.consultation {
+  margin-left: 3rem;
+  float: left;
+  width: 43%;
+  margin-bottom: 2rem;
+}
+
+.design {
+  margin-right: 11rem;
+  margin-bottom: 2rem;
+  width: 36%;
+  float: right;
+}
+
+.content{
+  margin-left: 3rem;
+  float: left;
+  width: 33%;
+}
+
+.hosting {
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  float: right;
+  width: 57%;
+}
+
+.logos {
+  clear: both;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+img.logo {
+  max-height: 85px;
+}
+
+@media (max-width: 1150px) {
+  div.pond {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .service_box {
+    float: none;
+    margin: 1%;
+    width: 48%;
+  }
+}
+
+@media (max-width: 800px) {
+  div.service_box {
+    width: 98%;
+  }
+}

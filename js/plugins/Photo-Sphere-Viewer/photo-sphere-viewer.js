@@ -559,11 +559,6 @@ var PhotoSphereViewer = function(args) {
 			addEvent(document, 'touchend', onMouseUp);
 			addEvent(document, 'touchmove', onTouchMove);
 
-			if (scroll_to_zoom) {
-				addEvent(canvas_container, 'mousewheel', onMouseWheel);
-				addEvent(canvas_container, 'DOMMouseScroll', onMouseWheel);
-			}
-
 			self.addAction('fullscreen-mode', toggleArrowKeys);
 		}
 

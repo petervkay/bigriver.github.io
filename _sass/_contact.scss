@@ -1,3 +1,18 @@
 form {
   text-align: center;
 }
+
+.text_tile.contact {
+	display:block;
+	width: 800px;
+    margin: auto auto;
+}
+
+#bigriverform {
+	input, textarea {
+		border-radius:6px;
+		padding:10px;
+		margin:15px;
+		font-family:"Source Sans Pro", Helvetica, Trebuchet, sans-serif;
+	}
+}

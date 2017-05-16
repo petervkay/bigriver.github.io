@@ -22,7 +22,7 @@ group: top-nav
 		{% include website_tile.html website=website %}
 		{% endfor %}
 	</div>
-	<div id='websiteViewer' style="display: none;" class="box"></div>
+	<div id='websiteViewer' style="display: none;" class="box clickable"></div>
 </div>
 
 <script>

@@ -31,12 +31,14 @@
     <meta name="msapplication-TileImage" content="../images/bigriverfavicons.ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{site.baseurl}}/js/photosphere-mod.js"></script>
+    
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -47,7 +49,7 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
+            <a href="{{ site.baseurl }}/" class="site-avatar clickable"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
 
           <nav class="top-nav">
             {% for item in site.pages %}
@@ -56,7 +58,7 @@
                 {% if page.url == item.url %}
                   {% assign css_class = 'active' %}
                 {% endif %}
-                <a href="{{ item.url | absolute_url }}" class="{{ css_class }}">{{ item.title }}</a>
+                <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>
               {% endif %}
             {% endfor %}
           </nav>
@@ -86,6 +88,7 @@
       panorama: '{{ site.baseurl}}/js/plugins/Photo-Sphere-Viewer/examples/snow.jpg',
       container: div,
       navbar:true,
-      anim_speed: '0rpm'
+      anim_speed: '0rpm',
+      loading_img: '{{site.baseurl}}/images/ring.svg'
     });
 </script>

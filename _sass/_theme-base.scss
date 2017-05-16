@@ -203,6 +203,7 @@ h6 {
 
 .img_text_tile {
     @include flexcol(4);
+    width: 23%;
     background-color: rgba(255,255,255,.7);
     border-radius: 6px;
     padding: 10px;

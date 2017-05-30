@@ -42,25 +42,20 @@ group: top-nav
 			});
 
 			function tagClick(e) {
-				console.log('showing', e.target.id);
 				$('.' + e.target.id).show();
 				if ($(e.target).hasClass('selected')) {
 					$.each($(e.target).parent().siblings().children(), function (i, v) {
 							if ($(v).hasClass('selected')) {
-								console.log('showing', v.id);
 								$('.' + v.id).show();
 								$.each($(e.target).siblings(), function (i, v) {
-									console.log('showing', v.id);
 									$('.' + v.id).show();
 								});
 								$.each($(v).siblings(), function (i, v) {
-									console.log('hiding', v.id);
 									$('.' + v.id).hide();
 								})
 								return false;
 							} else {
 								$.each($(e.target).siblings(), function (i, v) {
-									console.log('showing', v.id);
 									$('.' + v.id).show();
 								});
 							}
@@ -69,17 +64,14 @@ group: top-nav
 						$.each($(e.target).parent().siblings().children(), function (i, v) {
 								if ($(v).hasClass('selected')) {
 									$.each($(e.target).siblings(), function (i, v) {
-										console.log('hiding', v.id);
 										$('.' + v.id).hide();
 									});
 									$.each($(v).siblings(), function (i, v) {
-										console.log('hiding', v.id);
 										$('.' + v.id).hide();
 										});
 									return false;
 								} else {
 									$.each($(e.target).siblings(), function (i, v) {
-										console.log('hiding', v.id);
 										$('.' + v.id).hide();
 									});
 								}

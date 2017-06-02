@@ -14,5 +14,27 @@ form {
 		padding:10px;
 		margin:15px;
 		font-family:"Source Sans Pro", Helvetica, Trebuchet, sans-serif;
+		font-size:16px;
+	}
+
+	textarea {
+		width:613px;
+	}
+
+	input[type="submit"] {
+		background-color:$theme-color-one;
+		color:white;
+		width: 185px;
+    	font-size: 20px;
+	}
+}
+
+@media (max-width:810px) {
+	.text_tile.contact {
+		width:90%
+	}
+
+	textarea {
+		width:90%;
 	}
 }

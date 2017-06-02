@@ -41,202 +41,43 @@ group: top-nav
 				}
 			});
 
-			function showWordpress(e) {
+			function tagClick(e) {
+				$('.' + e.target.id).show();
 				if ($(e.target).hasClass('selected')) {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.SQUARESPACE').show();
-						$('.NATIONBUILDER').show();
-						$('.WORDPRESS').show();
-						$('.BUSINESS').hide();
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.SQUARESPACE').show();
-						$('.NATIONBUILDER').show();
-						$('.WORDPRESS').show();
-						$('.NON-PROFIT').hide();
+					$.each($(e.target).parent().siblings().children(), function (i, v) {
+							if ($(v).hasClass('selected')) {
+								$('.' + v.id).show();
+								$.each($(e.target).siblings(), function (i, v) {
+									$('.' + v.id).show();
+								});
+								$.each($(v).siblings(), function (i, v) {
+									$('.' + v.id).hide();
+								})
+								return false;
+							} else {
+								$.each($(e.target).siblings(), function (i, v) {
+									$('.' + v.id).show();
+								});
+							}
+						});
 					} else {
-						$('.SQUARESPACE').show();
-						$('.NATIONBUILDER').show();
-						$('.WORDPRESS').show();
-					}
-				} else {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-						$('.WORDPRESS').show();
-						$('.BUSINESS').hide();
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-						$('.WORDPRESS').show();
-						$('.NON-PROFIT').hide();
-					} else {
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-						$('.WORDPRESS').show();
+						$.each($(e.target).parent().siblings().children(), function (i, v) {
+								if ($(v).hasClass('selected')) {
+									$.each($(e.target).siblings(), function (i, v) {
+										$('.' + v.id).hide();
+									});
+									$.each($(v).siblings(), function (i, v) {
+										$('.' + v.id).hide();
+										});
+									return false;
+								} else {
+									$.each($(e.target).siblings(), function (i, v) {
+										$('.' + v.id).hide();
+									});
+								}
+						});
 					}
 				}
-			}
-
-			function showSquarespace(e) {
-				if ($(e.target).hasClass('selected')) {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-						$('.SQUARESPACE').show();
-						$('.BUSINESS').hide();
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-						$('.SQUARESPACE').show();
-						$('.NON-PROFIT').hide()
-					} else {
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-						$('.SQUARESPACE').show();
-					}
-				} else {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-						$('.SQUARESPACE').show();
-						$('.BUSINESS').hide();
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-						$('.SQUARESPACE').show();
-						$('.NON-PROFIT').hide();
-					} else {
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-						$('.SQUARESPACE').show();
-					}
-				}
-			}
-
-			function showNationbuilder(e) {
-				if ($(e.target).hasClass('selected')) {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.SQUARESPACE').show();
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-						$('.BUSINESS').hide()
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.SQUARESPACE').show();
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-						$('.NON-PROFIT').hide()
-					} else {
-						$('.SQUARESPACE').show();
-						$('.WORDPRESS').show();
-						$('.NATIONBUILDER').show();
-					}
-				} else {
-					if ($('#NON-PROFIT').hasClass('selected')) {
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').show();
-						$('.BUSINESS').hide();
-					} else if ($('#BUSINESS').hasClass('selected')) {
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').show();
-						$('.NON-PROFIT').hide();
-					} else {
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').show();
-					}
-				}
-			}
-
-			function showNonProfit(e) {
-				if ($(e.target).hasClass('selected')) {
-					if ($('#WORDPRESS').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#SQUARESPACE').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#NATIONBUILDER').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-					} else {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-					}
-				} else {
-					if ($('#WORDPRESS').hasClass('selected')) {
-						$('.BUSINESS').hide();
-						$('.NON-PROFIT').show();
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide()
-					} else if ($('#SQUARESPACE').hasClass('selected')) {
-						$('.BUSINESS').hide();
-						$('.NON-PROFIT').show();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide()
-					} else if ($('#NATIONBUILDER').hasClass('selected')) {
-						$('.BUSINESS').hide();
-						$('.NON-PROFIT').show();
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide()
-					} else {
-						$('.BUSINESS').hide();
-						$('.NON-PROFIT').show();
-					}
-				}
-			}
-
-			function showBusiness(e) {
-				if ($(e.target).hasClass('selected')) {
-					if ($('#WORDPRESS').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#SQUARESPACE').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#NATIONBUILDER').hasClass('selected')) {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-					} else {
-						$('.NON-PROFIT').show();
-						$('.BUSINESS').show();
-					}
-				} else {
-					if ($('#WORDPRESS').hasClass('selected')) {
-						$('.BUSINESS').show();
-						$('.NON-PROFIT').hide();
-						$('.SQUARESPACE').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#SQUARESPACE').hasClass('selected')) {
-						$('.BUSINESS').show();
-						$('.NON-PROFIT').hide();
-						$('.WORDPRESS').hide();
-						$('.NATIONBUILDER').hide();
-					} else if ($('#NATIONBUILDER').hasClass('selected')) {
-						$('.BUSINESS').show();
-						$('.NON-PROFIT').hide();
-						$('.SQUARESPACE').hide();
-						$('.WORDPRESS').hide();
-					} else {
-						$('.BUSINESS').show();
-						$('.NON-PROFIT').hide();
-					}
-				}
-			}
-
 
 </script>
 

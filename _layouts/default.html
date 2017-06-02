@@ -37,7 +37,7 @@
     <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
     <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.js"></script>
-    <script src="{{site.baseurl}}/js/photosphere-mod.js"></script>
+    <script src="{{site.baseurl}}/js/navigation.js"></script>
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -57,7 +57,7 @@
                 {% if page.url == item.url %}
                   {% assign css_class = 'active' %}
                 {% endif %}
-                <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>
+                <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}">{{ item.title }}</a>
               {% endif %}
             {% endfor %}
           </nav>

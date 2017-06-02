@@ -58,14 +58,27 @@
                   {% assign css_class = 'active' %}
                 {% endif %}
                 {% if item.title == 'Portfolio' %}
-                  <ul class="dropdown">
-                    <li><a class="hoverNeighbor clickable" href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>
-                      <ul class="dropdown-menu clickable">
-                        <li><a href="/portfolio">Websites</a></li>
-                        <li><a href="#">Apps and plugins</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                  {% if page.url == item.url %}
+                    <ul class="dropdown">
+                      <li>
+                        <a class="hoverNeighbor clickable active" href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>
+                        <ul class="dropdown-menu clickable">
+                          <li><a href="/portfolio">Websites</a></li>
+                          <li><a href="#">Apps and plugins</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  {% else %}
+                    <ul class="dropdown">
+                      <li>
+                        <a class="hoverNeighbor clickable" href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>
+                        <ul class="dropdown-menu clickable">
+                          <li><a href="/portfolio">Websites</a></li>
+                          <li><a href="#">Apps and plugins</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  {% endif %}
 
                 {% else %}
                   <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable">{{ item.title }}</a>

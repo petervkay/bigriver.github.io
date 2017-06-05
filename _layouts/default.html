@@ -84,12 +84,13 @@
 <script>
   var div = document.getElementById('photosphere-background');
   var PSV = new PhotoSphereViewer({
-      panorama: '{{ site.baseurl}}/js/plugins/Photo-Sphere-Viewer/examples/snow.jpg',
+      panorama: '{{ site.baseurl}}/images/riversphere.jpg',
       container: div,
       navbar:true,
       anim_speed: '0rpm',
       loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel:false,
-      gyroscope:true
+      gyroscope:true,
+      default_position:{lat:0, long:-1.07}  //radians!
     });
 </script>

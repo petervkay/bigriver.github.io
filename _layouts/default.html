@@ -57,7 +57,6 @@
                 {% if page.url == item.url %}
                   {% assign css_class = 'active' %}
                 {% endif %}
-<<<<<<< HEAD
                 <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}">{{ item.title }}</a>
               {% endif %}
             {% endfor %}

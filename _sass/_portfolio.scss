@@ -37,7 +37,8 @@ div.title, div.title > a {
   border-radius: 5px;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -48,6 +49,11 @@ div.title, div.title > a {
 
 div.title:hover {
   opacity: 1;
+}
+
+div.tileDesc {
+  font-size: 14px;
+  text-align: center;
 }
 
 div.box {

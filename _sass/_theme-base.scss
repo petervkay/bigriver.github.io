@@ -392,3 +392,27 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
+
+// header/dropdown menus
+
+ul.dropdown {
+  display: inherit;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+ul.dropdown-menu {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  margin-top: -2px;
+}
+
+ul.dropdown-menu:hover {
+  display: inline-block;
+}
+
+a.hoverNeighbor:hover + ul {
+  display: inline-block;
+}

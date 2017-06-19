@@ -1,0 +1,75 @@
+ul {
+  color: #72453F;
+}
+
+a.nbSearchLink {
+  color: #72453F;
+  text-decoration: underline;
+}
+
+.directoryPageBox {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 0px 12px 15px 12px;
+  font-size: 16px;
+}
+
+div.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.leftSide {
+  display: flex;
+  min-height: 27rem;
+  width: 39%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.screenShot {
+  width: 60%;
+  align-self: center;
+}
+
+div.nbBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  margin-bottom: 3rem;
+}
+
+p.padTop {
+  padding-top: .8rem;
+}
+
+#nbHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40rem;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 990px) {
+  div.leftSide {
+    min-height: 0;
+    width: 100%;
+  }
+  .directoryPageBox {
+    margin-bottom: .5rem;
+  }
+  div.nbBottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #nbHeading {
+    width: auto;
+  }
+  div.screenShot{
+    width: auto;
+  }
+}

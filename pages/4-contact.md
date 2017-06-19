@@ -5,7 +5,7 @@ group: top-nav
 permalink: /contact/
 ---
 
-<div class="text_tile contact clickable">
+<div class="form_tile contact clickable">
     <form id="bigriverform" method="POST"
           action="https://www.formingo.co/submit/bigriverwebdesign@gmail.com">
         <input type="text" name="full_name" placeholder="name">

@@ -43,13 +43,15 @@ alumninations:
     id: alumninations
     title: Alumni Nations
     description: This website was built using a modified version of a public Nationbuilder theme.
+    platform: NATIONBUILDER
     biztype: BUSINESS
 
 chippewafalls:
-    url: http://mightycardinals.alumninations.com
+    url: https://mightycardinals.alumninations.com
     id: chippewafalls
     title: Chippewa Falls
-    description: This is one of many school district sites that we built in conjunction with Alumni Nations
+    description: This is one of many school district sites that we built in conjunction with Alumni Nations.
+    platform: NATIONBUILDER
     biztype: NON-PROFIT
 
 eatmywords:
@@ -67,7 +69,7 @@ littlecreek:
     description: This website was built quickly and affordably using the Weebly platform
     platform: WEEBLY
     biztype: NON-PROFIT
-    
+
 
 nygaardnotes:
     url: http://www.nygaardnotes.org

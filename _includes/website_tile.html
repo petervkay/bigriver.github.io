@@ -2,7 +2,6 @@
 	<img class="siteImage" src="{{site.baseurl}}/images/screenshots/{{include.website[0]}}.png"/>
 	<div class='title' data-platformtag='{{include.website[1].platform}}' data-biztag='{{include.website[1].biztype}}' data-name='{{include.website[1].title}}' data-title="{{include.website[1].description}}" id='{{include.website[1].url}}' onclick="showIframe(event)">
 		<div class='tileHead'>{{include.website[1].title}}</div>
-		<div class='tileDesc'>{{include.website[1].description}}</div>
 	</div>
 </div>
 
@@ -16,15 +15,16 @@ function hideSpinner() {
 	$(spinner).remove();
 }
 function showIframe(e) {
+	console.log(e.target);
 	var targetDiv = document.getElementById('websiteViewer');
 	var coverTarget = document.getElementById('coverTarget');
-	var article = document.getElementById(e.target.id);
-	var frame = `<iframe id="siteView" style="background-color: white; position: fixed; z-index: 500; top: 5%; left: 5%; border-bottom: 2px outset lightgrey; border-left: 2px outset lightgrey; border-top: 2px outset lightgrey;" width = "75%" height = "90%"></iframe>`;
+	var article = document.getElementById(e.currentTarget.id);
+	var frame = `<iframe id="siteView" style="background-color: white; position: fixed; z-index: 500; top: 5%; left: 1%; border-bottom: 2px outset lightgrey; border-left: 2px outset lightgrey; border-top: 2px outset lightgrey;" width = "83%" height = "90%"></iframe>`;
 	var sidebar = '<div id="iframeSidebar"></div>';
-	var cover = '<div id="cover" style="z-index: 400; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); display: block; width: 100%; height: 500%; position: absolute;" onclick="hideIframe()"></div>'
+	var cover = '<div id="cover" style="z-index: 400; top: -500px; left: -10px; background-color: rgba(0, 0, 0, 0.7); display: block; width: 900%; height: 900%; position: absolute;" onclick="hideIframe()"></div>'
 		$(coverTarget).append( cover );
 		$(targetDiv).append( frame, sidebar);
-		$('#siteView').attr('src', e.target.id);
+		$('#siteView').attr('src', e.currentTarget.id);
 		$('#iframeSidebar').append( '<p style="align-self: flex-end; cursor: pointer; position: fixed;" onclick="hideIframe(event)">X</p>');
 		$('#iframeSidebar').append( '<h4 style="color: #72453F; text-align: center;">' + article.dataset.name + '</h4>');
 		$('#iframeSidebar').append( '<p style="font-size: 17px; margin-bottom: 1.75rem;">' + article.dataset.title + '</p>' );

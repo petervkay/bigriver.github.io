@@ -1,3 +1,7 @@
+div#main-container {
+  display: none;
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -71,7 +75,7 @@ div#iframeSidebar {
   width: 15%;
   z-index: 500;
   top: 5%;
-  left: 80%;
+  left: 84%;
   border-top: 2px outset lightgrey;
   border-bottom: 2px outset lightgrey;
   border-right: 2px outset lightgrey;

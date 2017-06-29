@@ -1,55 +1,99 @@
-lrc:
-    url: https://livingroomconversations.nationbuilder.com
-    id: lrc
-    title: Living Room Conversations
-    description: This large project features an advanced Nationbuilder theme and includes some fancy interactive graphics.
-    platform: NATIONBUILDER
-    biztype: NON-PROFIT
-
-mnau:
+mnacademics:
     url: http://mnacademics.org
-    id: mnau
+    id: mnacademics
     title: MN Academics United
     description: This website was built for SEIU Local 284, which is organizing academics in Minnesota. This Wordpress theme was built using the Betheme framework.
     platform: WORDPRESS
     biztype: NON-PROFIT
 
-btbl:
+behindtheblueline:
     url: https://www.bluelinemn.org
-    id: btbl
+    id: behindtheblueline
     title: Behind the Blue Line
     description: This website features interviews and photographs with people who have experienced police brutality. We built a customized Wordpress theme that combines a photography gallery with an interactive means for people to navigate through interviews.
     platform: WORDPRESS
     biztype: NON-PROFIT
 
-15now:
-    url: https://15nowmn.nationbuilder.com/
-    id: 15now
-    title: "15 NOW Minnesota"
-    description: This website was the first full site we built in the Nationbuilder platform using a theme that we custom built to suit the organization's needs. We are excited to do more work with the Nationbuilder platform as it offers small to medium organizations unparalleled tools for managing a support network including integrated email lists, fundraising, and content delivery.
-    platform: NATIONBUILDER
-    biztype: NON-PROFIT
-
-npsy:
+northpsychology:
     url: http://www.northpsychology.com
-    id: npsy
+    id: northpsychology
     title: North Psychology Clinic
     description: This clinic's old website was outdated, lacking responsiveness to mobile devices. We designed a custom Wordpress theme that modernized many design elements of the old site.
     platform: WORDPRESS
     biztype: NON-PROFIT
 
-emwb:
+inthegroovemusic:
+    url: http://www.inthegroovemusic.com
+    id: inthegroovemusic
+    title: In The Groove Music
+    description: We were hired to setup a complex WordPress theme.  We discovered that some components of the theme were broken with modern web standards, so we ended up customizing and overhauling large sections of the theme.
+    platform: WORDPRESS
+    biztype: BUSINESS
+
+15nowmn:
+    url: https://15nowmn.nationbuilder.com/
+    id: 15nowmn
+    title: 15 NOW Minnesota
+    description: This website was the first full site we built in the Nationbuilder platform using a theme that we custom built to suit the organization's needs. We are excited to do more work with the Nationbuilder platform as it offers small to medium organizations unparalleled tools for managing a support network including integrated email lists, fundraising, and content delivery.
+    platform: NATIONBUILDER
+    biztype: NON-PROFIT
+
+alumninations:
+    url: http://www.alumninations.com
+    id: alumninations
+    title: Alumni Nations
+    description: This website was built using a modified version of a public Nationbuilder theme.
+    biztype: BUSINESS
+
+chippewafalls:
+    url: http://mightycardinals.alumninations.com
+    id: chippewafalls
+    title: Chippewa Falls
+    description: This is one of many school district sites that we built in conjunction with Alumni Nations
+    biztype: NON-PROFIT
+
+eatmywords:
     url: https://www.eatmywordsbooks.com
-    id: emwb
+    id: eatmywords
     title: Eat My Words Books
-    description: This was a website built extremely quickly and affordably using the Squarespace platform.
+    description: This website was built quickly and affordably using the Squarespace platform.
     platform: SQUARESPACE
     biztype: BUSINESS
 
-nygn:
+littlecreek:
+    url: http://www.littlecreekcamp.com
+    id: littlecreek
+    title: Little Creek Camp
+    description: This website was built quickly and affordably using the Weebly platform
+    platform: WEEBLY
+    biztype: NON-PROFIT
+    
+
+nygaardnotes:
     url: http://www.nygaardnotes.org
-    id: nygn
+    id: nygaardnotes
     title: Nygaard Notes
     description: This is a custom theme which allows the author to easily add new issues that are automatically formatted and indexed.
     platform: WORDPRESS
     biztype: BUSINESS
+
+customDonations:
+    url: http://commongroundmeditation.org/about/supporting-the-center#post-1523
+    id: customDonations
+    title: WordPress Custom Donations
+    description: This is a WordPress plugin that we build to add a customizable form to accept one-time and recurring donations through PayPal.  More information at <a href= 'https://wordpress.org/plugins/custom-donations/'>https://wordpress.org/plugins/custom-donations/</a>.
+    platform: APPLICATIONS
+
+NBdirectory:
+    url: http://piratenation.alumninations.com/directory
+    id: NBdirectory
+    title: NBdirectory
+    description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information at <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>http://www.bigriverwebdesign.com/nationbuilder-directory</a>.
+    platform: APPLICATIONS
+
+policecomplaintarchive:
+    url: http://petervkay.pythonanywhere.com/police_archive
+    id: policecomplaintarchive
+    title: Police Complaint Archive
+    description: This is an application built with Django which thovides a interface for users to search through years of police complaints in Minneapolis and St. Paul.
+    platform: APPLICATIONS

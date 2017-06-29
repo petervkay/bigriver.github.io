@@ -47,7 +47,7 @@ alumninations:
     biztype: BUSINESS
 
 chippewafalls:
-    url: https://mightycardinals.alumninations.com
+    url: http://mightycardinals.alumninations.com
     id: chippewafalls
     title: Chippewa Falls
     description: This is one of many school district sites that we built in conjunction with Alumni Nations.
@@ -88,8 +88,8 @@ customDonations:
 
 NBdirectory:
     url: http://piratenation.alumninations.com/directory
-    id: nbDirectory
-    title: nbDirectory
+    id: NBdirectory
+    title: NBdirectory
     description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information at <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>http://www.bigriverwebdesign.com/nationbuilder-directory</a>.
     platform: APPLICATIONS
 

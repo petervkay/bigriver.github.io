@@ -29,7 +29,9 @@ function showIframe(e) {
 		$('#iframeSidebar').append( '<h4 style="color: #72453F; text-align: center;">' + article.dataset.name + '</h4>');
 		$('#iframeSidebar').append( '<p style="font-size: 17px; margin-bottom: 1.75rem;">' + article.dataset.title + '</p>' );
 		$('#iframeSidebar').append( '<p class="sidetag">' + article.dataset.platformtag + '</p>' )
-		$('#iframeSidebar').append( '<p class="sidetag">' + article.dataset.biztag + '</p>' )
+		if (article.dataset.biztag) {
+			$('#iframeSidebar').append( '<p class="sidetag">' + article.dataset.biztag + '</p>' );
+		}
     if (targetDiv.style.display === 'none') {
         targetDiv.style.display = 'block';
     } else {

@@ -90,7 +90,7 @@ NBdirectory:
     url: http://piratenation.alumninations.com/directory
     id: NBdirectory
     title: NBdirectory
-    description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information at <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>http://www.bigriverwebdesign.com/nationbuilder-directory</a>.
+    description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information on the application's page <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>here</a>.
     platform: APPLICATIONS
 
 policecomplaintarchive:

@@ -73,11 +73,11 @@
 				if (getParameterByName('site')) {
 					eventFire(document.getElementById(getParameterByName('site')), 'click');
 				}
-				if (getParameterByName('btag')) {
-					console.log(getParameterByName('btag'));
-					eventFire(document.getElementById(getParameterByName('btag')), 'click');
+				if (getParameterByName('type')) {
+					console.log(getParameterByName('type'));
+					eventFire(document.getElementById(getParameterByName('type')), 'click');
 				}
-				if (getParameterByName('ptag')) {
-					console.log(getParameterByName('ptag'));
-					eventFire(document.getElementById(getParameterByName('ptag')), 'click');
+				if (getParameterByName('platform')) {
+					console.log(getParameterByName('platform'));
+					eventFire(document.getElementById(getParameterByName('platform')), 'click');
 				}

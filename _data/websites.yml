@@ -47,7 +47,7 @@ alumninations:
     biztype: BUSINESS
 
 chippewafalls:
-    url: http://mightycardinals.alumninations.com
+    url: http://mightycardinals.nationbuilder.com
     id: chippewafalls
     title: Chippewa Falls
     description: This is one of many school district sites that we built in conjunction with Alumni Nations.
@@ -83,7 +83,7 @@ customDonations:
     url: http://commongroundmeditation.org/about/supporting-the-center#post-1523
     id: customDonations
     title: WordPress Custom Donations
-    description: This is a WordPress plugin that we build to add a customizable form to accept one-time and recurring donations through PayPal.  More information at <a href= 'https://wordpress.org/plugins/custom-donations/'>https://wordpress.org/plugins/custom-donations/</a>.
+    description: This is a WordPress plugin that we build to add a customizable form to accept one-time and recurring donations through PayPal.  More information on the application's page <a href= 'https://wordpress.org/plugins/custom-donations/'>here</a>.
     platform: APPLICATIONS
 
 NBdirectory:

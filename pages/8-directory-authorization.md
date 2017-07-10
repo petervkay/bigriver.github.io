@@ -33,7 +33,7 @@ permalink: /directory-authorization/
     }
 </script>
 
-<form id="auth-form" onsubmit="requestAuth()">
+<form id="auth-form" class="clickable" onsubmit="requestAuth()">
     <input id='slug' type='text' name='nation_slug' label='Nation Slug'>
     <input id='submit' type='submit' value='Submit'>
 </form>

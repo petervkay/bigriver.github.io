@@ -50,3 +50,34 @@
 						});
 					}
 				}
+
+				function eventFire(el, etype){
+				  if (el.fireEvent) {
+				    el.fireEvent('on' + etype);
+				  } else {
+				    var evObj = document.createEvent('Events');
+				    evObj.initEvent(etype, true, false);
+				    el.dispatchEvent(evObj);
+				  }
+				}
+
+				function getParameterByName(name, url) {
+				    if (!url) url = window.location.href;
+				    name = name.replace(/[\[\]]/g, "\\$&");
+				    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				        results = regex.exec(url);
+				    if (!results) return null;
+				    if (!results[2]) return '';
+				    return decodeURIComponent(results[2].replace(/\+/g, " "));
+				}
+				if (getParameterByName('site')) {
+					eventFire(document.getElementById(getParameterByName('site')), 'click');
+				}
+				if (getParameterByName('type')) {
+					console.log(getParameterByName('type'));
+					eventFire(document.getElementById(getParameterByName('type')), 'click');
+				}
+				if (getParameterByName('platform')) {
+					console.log(getParameterByName('platform'));
+					eventFire(document.getElementById(getParameterByName('platform')), 'click');
+				}

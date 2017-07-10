@@ -9,3 +9,11 @@ squarespace:
 nationbuilder:
   tag: NATIONBUILDER
   tagtype: platformtag
+
+weebly:
+  tag: WEEBLY
+  tagtype: platformtag
+
+applications:
+  tag: APPLICATIONS
+  tagtype: platformtag

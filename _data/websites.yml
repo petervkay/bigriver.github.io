@@ -43,13 +43,15 @@ alumninations:
     id: alumninations
     title: Alumni Nations
     description: This website was built using a modified version of a public Nationbuilder theme.
+    platform: NATIONBUILDER
     biztype: BUSINESS
 
 chippewafalls:
-    url: http://mightycardinals.alumninations.com
+    url: http://mightycardinals.nationbuilder.com
     id: chippewafalls
     title: Chippewa Falls
-    description: This is one of many school district sites that we built in conjunction with Alumni Nations
+    description: This is one of many school district sites that we built in conjunction with Alumni Nations.
+    platform: NATIONBUILDER
     biztype: NON-PROFIT
 
 eatmywords:
@@ -67,7 +69,7 @@ littlecreek:
     description: This website was built quickly and affordably using the Weebly platform
     platform: WEEBLY
     biztype: NON-PROFIT
-    
+
 
 nygaardnotes:
     url: http://www.nygaardnotes.org
@@ -81,14 +83,14 @@ customDonations:
     url: http://commongroundmeditation.org/about/supporting-the-center#post-1523
     id: customDonations
     title: WordPress Custom Donations
-    description: This is a WordPress plugin that we build to add a customizable form to accept one-time and recurring donations through PayPal.  More information at <a href= 'https://wordpress.org/plugins/custom-donations/'>https://wordpress.org/plugins/custom-donations/</a>.
+    description: This is a WordPress plugin that we build to add a customizable form to accept one-time and recurring donations through PayPal.  More information on the application's page <a href= 'https://wordpress.org/plugins/custom-donations/'>here</a>.
     platform: APPLICATIONS
 
 NBdirectory:
     url: http://piratenation.alumninations.com/directory
     id: NBdirectory
     title: NBdirectory
-    description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information at <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>http://www.bigriverwebdesign.com/nationbuilder-directory</a>.
+    description: This is a NationuBuilder integration, built with ExpressJS, which adds a searchable directory integrated with a website's NationBuilder database. More information on the application's page <a href='http://www.bigriverwebdesign.com/nationbuilder-directory'>here</a>.
     platform: APPLICATIONS
 
 policecomplaintarchive:

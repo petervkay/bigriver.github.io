@@ -12,14 +12,14 @@ group: top-nav
     {% endfor %}
   </div>
 
-  <div class="logos">
-    <a href="http://www.wordpress.com"><img class="logo" src="{{ site.baseurl }}/images/wordpress-logo.png"
+  <div class="logos clickable">
+    <a class="clickable" href="http://www.wordpress.com"><img class="clickable logo" src="{{ site.baseurl }}/images/wordpress-logo.png"
          alt="wordpress" /></a>
-    <a href="https://www.djangoproject.com/"><img class="logo" src="{{ site.baseurl }}/images/django-logo.svg"
+    <a class="clickable" href="https://www.djangoproject.com/"><img class="clickable logo" src="{{ site.baseurl }}/images/django-logo.svg"
          alt="django" /></a>
-    <a href="http://www.nationbuilder.com"><img class="logo" src="{{ site.baseurl }}/images/nationbuilder-logo.jpg"
+    <a class="clickable" href="http://www.nationbuilder.com"><img class="clickable logo" src="{{ site.baseurl }}/images/nationbuilder-logo.jpg"
          alt="nationbuilder" /></a>
-    <a href="https://jekyllrb.com/"><img class="logo" src="{{ site.baseurl }}/images/jekyll-logo.png"
+    <a class="clickable" href="https://jekyllrb.com/"><img class="clickable logo" src="{{ site.baseurl }}/images/jekyll-logo.png"
          alt="jekyll" /></a>
   </div>
 </div>

@@ -1,3 +1,9 @@
+---
+title: Directory Authorization
+layout: page
+permalink: /directory-authorization/
+---
+
 <script>
     function requestAuth() {
         event.preventDefault();

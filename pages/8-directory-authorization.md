@@ -8,6 +8,7 @@ permalink: /directory-authorization/
     function requestAuth() {
         event.preventDefault();
         slug = $("#slug").val();
+        console.log(slug);
 
         function preauthorize(slug, callback) {
                 var data= {
@@ -29,7 +30,7 @@ permalink: /directory-authorization/
                window.location.href = url;
         }
 
-        preauthorize(slug, authorization_redirect());
+       /* preauthorize(slug, authorization_redirect()); */
     }
 </script>
 

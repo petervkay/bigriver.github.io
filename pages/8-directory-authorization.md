@@ -16,14 +16,14 @@ permalink: /directory-authorization/
 
                 $.ajax({
                     type: "GET",
-                    url: "https://nbdirectory.site/preauthenicate",
+                    url: "http://www.nbdirectory.site/preauthenticate",
                     data: data,
                     crossDomain: true,
                 });
 
-                console.log('slug');
+                console.log(slug);
 
-                callback(slug);
+                /*callback(slug);*/
             }
 
         function authorization_redirect(slug) {

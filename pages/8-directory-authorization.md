@@ -8,19 +8,20 @@ permalink: /directory-authorization/
     function requestAuth() {
         event.preventDefault();
         slug = $("#slug").val();
-        console.log(slug);
 
-        function preauthorize(slug, callback) {
+        function preauthenticate(slug, callback) {
                 var data= {
                     'slug' : slug
                 }
 
                 $.ajax({
                     type: "GET",
-                    url: "http://nbdirectory.site/authorize",
+                    url: "https://nbdirectory.site/preauthenicate",
                     data: data,
                     crossDomain: true,
                 });
+
+                console.log('slug');
 
                 callback(slug);
             }
@@ -30,7 +31,7 @@ permalink: /directory-authorization/
                window.location.href = url;
         }
 
-       /* preauthorize(slug, authorization_redirect()); */
+       preauthenticate(slug, authorization_redirect);
     }
 </script>
 

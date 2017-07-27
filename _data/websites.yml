@@ -94,7 +94,7 @@ NBdirectory:
     platform: APPLICATIONS
 
 policecomplaintarchive:
-    url: http://petervkay.pythonanywhere.com/police_archive
+    url: http://complaints.cuapb.org/
     id: policecomplaintarchive
     title: Police Complaint Archive
     description: This is an application built with Django which thovides a interface for users to search through years of police complaints in Minneapolis and St. Paul.

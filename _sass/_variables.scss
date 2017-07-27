@@ -21,10 +21,12 @@ $link-color:$theme-color-one;
 // Font stacks
 $sans-font-family: "Source Sans Pro", Helvetica, Trebuchet, sans-serif;
 $serif-font-family: Georgia, serif;
-$sans-bold-weight: 700;
+$sans-bold-weight: 700;;
 
 // Backgrounds
-$trans-white:rgba(255,255,255,.9);
+$trans-white:rgba(255,255,255,.8);
+// Buttons
+$success-button-background:#b1f9b1;
 
 // Mobile breakpoints
 @mixin mobile {

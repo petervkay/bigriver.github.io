@@ -79,6 +79,22 @@ nygaardnotes:
     platform: WORDPRESS
     biztype: BUSINESS
 
+homeopathyminneapolis:
+    url: http://www.homeopathyminneapolis.com
+    id: homeopathyminneapolis
+    title: Homeopathy Minneapolis
+    description: coming soon
+    platform: WORDPRESS
+    biztype: BUSINESS
+
+bigriverwebdesign:
+    url: http://www.bigriverwebdesign.com
+    id: bigriverwebdesign
+    title: Big River Web Design
+    description: coming soon
+    platform: JEKYLL
+    biztype: BUSINESS
+
 customDonations:
     url: http://commongroundmeditation.org/about/supporting-the-center#post-1523
     id: customDonations

@@ -1,35 +1,26 @@
+.pond {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .service_box {
-    background-color: rgba(255,255,255,.7);
-    border-radius: 6px;
-    padding: 0px 12px 15px 12px;
-    font-size: 16px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  padding: 0px 12px 15px 12px;
+  font-size: 16px;
+  width: 30%;
+  margin: 0 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.consultation {
-  margin-left: 3rem;
-  float: left;
-  width: 43%;
-  margin-bottom: 2rem;
-}
-
-.design {
-  margin-right: 11rem;
-  margin-bottom: 2rem;
-  width: 36%;
-  float: right;
-}
-
-.content{
-  margin-left: 3rem;
-  float: left;
-  width: 33%;
-}
-
-.hosting {
-  margin-right: 3rem;
-  margin-bottom: 3rem;
-  float: right;
-  width: 57%;
+.icon-speech-streamline-talk-user::before, .icon-pen-streamline::before, .icon-design-graphic-tablet-streamline-tablet::before, .icon-computer-network-streamline::before, .icon-envelope-o::before {
+  font-size: 55px;
+  padding: 1rem;
 }
 
 .logos {

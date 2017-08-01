@@ -9,6 +9,8 @@ div#main-container {
 }
 
 .website_tile {
+    justify-content: center;
+    align-items: center;
     width: 350px;
     margin: 0 6px;
     display: flex;
@@ -32,7 +34,6 @@ div#main-container {
   height: 236px;
   width: 236px;
   position: absolute;
-  margin: 12px 57px;
 }
 
 div.title, div.title > a {
@@ -83,35 +84,36 @@ div#iframeSidebar {
 
 #tags {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 3px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
   width: 1074px;
-  height: 33px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   margin-bottom: .8rem;
 }
 
+div#platTags {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
 div#bizTags {
-  align-self: flex-end;
-}
-
-p.tag:first-of-type {
-  margin-left: 24px;
-}
-
-p.tag:last-of-type {
-  margin-right: 24px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
 }
 
 p.tag {
+  width: 100px;
+  text-align: center;
   cursor: pointer;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1;
   margin: 0 6px;
   padding: 4px 8px;
-  display: inline;
+  display: inline-block;
   border-radius: 5px;
   background-color: #D0D0D0;
   color: white;
@@ -131,15 +133,61 @@ p.sidetag:last-of-type {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 1164px) {
+@media (max-width: 1105px) {
+  .website_tile {
+    width: 300px;
+    height: 210px;
+  }
+  .siteImage {
+    height: 186px;
+    width: 186px;
+  }
   #tags {
-    width: 712px;
+    width: 100%;
   }
 }
 
-@media (max-width: 783px) {
-  #tags {
+@media (max-width: 955px) {
+  .website_tile {
     width: 350px;
-    height: auto;
+    height: 260px;
+  }
+  .siteImage {
+    height: 236px;
+    width: 236px;
+  }
+}
+
+@media (max-width: 925px) {
+  div#platTags {
+    width: 350px;
+  }
+  div#bizTags {
+    width: 125px;
+  }
+  p.tag {
+    margin: 3px 6px;
+  }
+}
+
+@media (max-width: 743px) {
+  .website_tile {
+    width: 300px;
+    height: 210px;
+  }
+  .siteImage {
+    height: 186px;
+    width: 186px;
+  }
+}
+
+@media (max-width: 643px) {
+  .website_tile {
+    width: 350px;
+    height: 260px;
+  }
+  .siteImage {
+    height: 236px;
+    width: 236px;
   }
 }

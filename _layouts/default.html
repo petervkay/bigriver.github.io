@@ -87,10 +87,26 @@
       panorama: '{{ site.baseurl}}/images/riversphere.jpg',
       container: div,
       navbar:true,
-      anim_speed: '0rpm',
+      anim_speed: '2rpm',
       loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel:false,
       gyroscope:true,
       default_position:{lat:0, long:-1.07}  //radians!
     });
+    PhotoSphereViewer.prototype.stopAutorotate = function() {
+  if (this.prop.start_timeout) {
+    window.clearTimeout(this.prop.start_timeout);
+    this.prop.start_timeout = null;
+  }
+
+  if (this.prop.autorotate_reqid) {
+    window.cancelAnimationFrame(this.prop.autorotate_reqid);
+    this.prop.autorotate_reqid = null;
+
+    this.trigger('autorotate', false);
+  }
+}
+    setTimeout(function() {
+      PhotoSphereViewer.toggleAutorotate();
+    }, 5000);
 </script>

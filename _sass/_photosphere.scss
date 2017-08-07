@@ -1,32 +1,37 @@
-  /* photosphere is currently set to fill #main, this setting is the footer script of default.html */
+/* photosphere is currently set to fill #main, this setting is the footer script of default.html */
+#main {
+    width: 100%;
+    /* required for photosphere to show up */
+    height: 100%;
+}
 
-
-  #main {
-        width: 100%;  /* required for photosphere to show up */
-        height: 100%;
-
-  }
-
-  canvas {
+canvas {
     cursor: all-scroll;
-  }
+}
 
-  #photosphere-background img { /* Centering loading image */
-  	position: absolute;
+#photosphere-background img {
+    /* Centering loading image */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-  }
-
-  //
-  // #photosphere-background
-  //
-
-  #photosphere-background {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: -1;
-      width: 100vw;
-      height: 100vh;
-  }
+}
+//
+// #photosphere-background
+//
+#photosphere-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    > div > div:last-child {
+        display: none;
+    }
+    @include mobile {
+        > div > div:last-child {
+            display: block;
+        }
+    };
+}

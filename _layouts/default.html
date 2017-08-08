@@ -82,13 +82,17 @@
     panorama: '{{ site.baseurl}}/images/riversphere.jpg',
     container: div,
     navbar: true,
-    anim_speed: '0rpm',
+    anim_speed: '1rpm',
     loading_img: '{{site.baseurl}}/images/ring.svg',
     mousewheel: false,
     gyroscope: true,
     default_position: {
       lat: 0,
-      long: -1.07
+      long: -1.97
     } //radians!
   });
+</script>
+
+<script>
+setTimeout(function(){ PSV.toggleAutorotate(); }, 8000);
 </script>

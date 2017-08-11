@@ -50,7 +50,7 @@ permalink: /nationbuilder-directory/
       </div>
       <br/>
     </div>
-    <div class="clickable" style="margin: -1rem auto 0 auto;">
+    <div class="clickable" style="">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal-form">
         <input type="hidden" name="cmd" value="_s-xclick"><br>
         <input type="hidden" name="hosted_button_id" value="H423WJKVPCP7U"><br>

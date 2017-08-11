@@ -1,22 +1,27 @@
-consultation:
+icon-speech-streamline-talk-user:
   text: >
     ###### **Initial Consultation**
 
-    Have no idea where to start? Email us at bigriverwebdesign@gmail.com to set up a free phone consultation. We can work with you to strategize about what a website can do for your organization and figure out what tools are appropriate to use.
-design:
-  text: >
-    ###### **Theme Design and Development**
-
-    Looking for something quick and simple? We use prebuilt WordPress, Nationbuilder and Squarespace themes that look great right out of the box.
-    <br><br>
-    Looking for something customized? We work with professional designers to create a site with an elegant and unique visual style, then turn it over to the coders to make the vision a reality.
-content:
+    Let us get to know you and we’ll strategize what a website can do for your organization. Email us at info@bigriverwebdesign.com to set up a phone consultation to find the right tactics, tools, and platforms for you.
+icon-pen-streamline:
   text: >
     ###### **Content Generation**
 
-    Need content for your site? We work with professional photographers, videographers, writers, and editors so that you don't have to worry about it.
-hosting:
+    Our team works with professional photographers, videographers, writers, and editors to create whatever content you made need to communicate your mission to your people.
+icon-design-graphic-tablet-streamline-tablet:
+  text: >
+    ###### **Web Design and Development**
+
+    Whether your looking for something simple or something extra, we’ve got the site for you. Using WordPress, Nationbuilder, and Squarespace we can build you a quick and simple site.
+    <br><br>
+    Or utilize our professional designers to create something with an elegant and unique style, and watch that vision turn to a reality with our coding team.
+icon-computer-network-streamline:
   text: >
     ###### **Website Hosting and Maintenance**
 
-    Our website hosting package means that you don't have to worry about dealing with another hosting company because we take care of it for you. Our WordPress maintenance package keeps sites updated, backed up, and checks them for malware on a regular basis. For more information, contact us at bigriverwebdesign@gmail.com.
+    Our website hosting package means that you don’t have to worry about dealing with another hosting company because we take care of it for you. Our WordPress maintenance package keeps sites updated, backed up, and checks them for malware on a regular basis. For more information, contact us at info@bigriverwebdesign.com
+icon-envelope-o:
+  text: >
+    ###### **Miscellaneous Technical Support**
+
+    We’ve helped clients with everything from setting up their business email systems, to setting up PayPal donation systems, to helping set up systems like MailChimp or NationBuilder for mass-emailing customers and constituents.  We’re happy to help you with whatever you need.

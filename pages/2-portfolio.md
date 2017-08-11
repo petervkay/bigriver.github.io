@@ -6,8 +6,8 @@ group: top-nav
 ---
 <div id="main-container">
 	<div id='coverTarget' class='center'>
-		<div id='tags'>
-			<div id='platTags'>
+		<div id='tags' class='clickable'>
+			<div id='platTags' class='clickable'>
 				{% for tags in site.data.platformtags %}
 				{% include tags.html content=tags %}
 				{% endfor %}

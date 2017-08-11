@@ -13,13 +13,13 @@ group: top-nav
   </div>
 
   <div class="logos clickable">
-    <a class="clickable" href="http://www.wordpress.com"><img class="clickable logo" src="{{ site.baseurl }}/images/wordpress-logo.png"
+    <a class="clickable" href="{{ site.baseurl }}/portfolio/?platform=WORDPRESS"><img class="clickable logo" src="{{ site.baseurl }}/images/wordpress-logo.png"
          alt="wordpress" /></a>
-    <a class="clickable" href="https://www.djangoproject.com/"><img class="clickable logo" src="{{ site.baseurl }}/images/django-logo.svg"
+    <a class="clickable" href="{{ site.baseurl }}/portfolio/?platform=APPLICATIONS"><img class="clickable logo" src="{{ site.baseurl }}/images/django-logo.svg"
          alt="django" /></a>
-    <a class="clickable" href="http://www.nationbuilder.com"><img class="clickable logo" src="{{ site.baseurl }}/images/nationbuilder-logo.jpg"
+    <a class="clickable" href="{{ site.baseurl }}/portfolio/?platform=NATIONBUILDER"><img class="clickable logo" src="{{ site.baseurl }}/images/nationbuilder-logo.jpg"
          alt="nationbuilder" /></a>
-    <a class="clickable" href="https://jekyllrb.com/"><img class="clickable logo" src="{{ site.baseurl }}/images/jekyll-logo.png"
+    <a class="clickable" href="{{ site.baseurl }}/portfolio/?platform=JEKYLL"><img class="clickable logo" src="{{ site.baseurl }}/images/jekyll-logo.png"
          alt="jekyll" /></a>
   </div>
 </div>

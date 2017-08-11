@@ -1,74 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    {% include meta.html %}
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    <!--[if lt IE 9]>
+  {% include meta.html %}
+
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="stylesheet" href="https://webkul.github.io/csspin/csspin.css">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/bigriverfavicons.ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../images/bigriverfavicons.ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/bigriverfavicons.ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../images/bigriverfavicons.ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/bigriverfavicons.ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../images/bigriverfavicons.ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/bigriverfavicons.ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../images/bigriverfavicons.ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/bigriverfavicons.ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../images/bigriverfavicons.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/bigriverfavicons.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../images/bigriverfavicons.ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/bigriverfavicons.ico/favicon-16x16.png">
-    <link rel="manifest" href="../images/bigriverfavicons.ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../images/bigriverfavicons.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="stylesheet" href="https://webkul.github.io/csspin/csspin.css">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/bigriverfavicons.ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/bigriverfavicons.ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/bigriverfavicons.ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/bigriverfavicons.ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/bigriverfavicons.ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/bigriverfavicons.ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/bigriverfavicons.ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/bigriverfavicons.ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/bigriverfavicons.ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/bigriverfavicons.ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/bigriverfavicons.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/bigriverfavicons.ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/bigriverfavicons.ico/favicon-16x16.png">
+  <link rel="manifest" href="../images/bigriverfavicons.ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../images/bigriverfavicons.ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="{{site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
-    <script src="{{site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
-    <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
-    <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
-    <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.js"></script>
-    <script src="{{site.baseurl}}/js/navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
+  <script src="{{site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
+  <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
+  <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
+  <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.js"></script>
+  <script src="{{site.baseurl}}/js/navigation.js"></script>
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+</head>
 
-  <body>
-    <div id="photosphere-background">
-    </div>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
+<body>
+  <div id="photosphere-background">
+  </div>
+  <div class="wrapper-masthead">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
 
-          <nav class="top-nav">
-            {% for item in site.pages %}
-              {% if item.group == "top-nav" %}
-                {% assign css_class = '' %}
-                {% if page.url == item.url %}
-                  {% assign css_class = 'active' %}
-                {% endif %}
-                <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id ="{{item.title | downcase}}" data-name="{{item.title | downcase}}">{{ item.title }}</a>
-              {% endif %}
-            {% endfor %}
-          </nav>
-        </header>
-      </div>
+        <nav class="top-nav">
+          {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
+          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}">{{ item.title }}</a> {% endif %} {% endfor %}
+        </nav>
+      </header>
     </div>
+  </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-    <!--
+  <div id="main" role="main" class="container">
+    {{ content }}
+  </div>
+  <!--
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
@@ -77,20 +71,28 @@
       </div>
     </div>
     -->
-    {% include analytics.html %}
-  </body>
+  {% include analytics.html %}
+</body>
+
 </html>
 
 <script>
   var div = document.getElementById('photosphere-background');
   var PSV = new PhotoSphereViewer({
-      panorama: '{{ site.baseurl}}/images/riversphere.jpg',
-      container: div,
-      navbar:true,
-      anim_speed: '0rpm',
-      loading_img: '{{site.baseurl}}/images/ring.svg',
-      mousewheel:false,
-      gyroscope:true,
-      default_position:{lat:0, long:-1.07}  //radians!
-    });
+    panorama: '{{ site.baseurl}}/images/riversphere.jpg',
+    container: div,
+    navbar: true,
+    anim_speed: '2rpm',
+    loading_img: '{{site.baseurl}}/images/ring.svg',
+    mousewheel: false,
+    gyroscope: true,
+    default_position: {
+      lat: 0,
+      long: -1.8
+    } //radians!
+  });
+</script>
+
+<script>
+setTimeout(function(){ PSV.toggleAutorotate(); }, 6500);
 </script>

@@ -37,7 +37,7 @@ permalink: /nationbuilder-directory/
         <h6>Pricing</h6>
         <p class="padTop">For addition information, contact&nbsp;<a class="nbSearchLink" href="mailto:peter@bigriverwebdesign.com">peter@bigriverwebdesign.com.</a></p>
         <br/>
-        <p>To purchase application, please use the subscribe button below. Upon subscription, you will receive an email with details about how to set up the application.</p>
+        <p>To purchase application, please use the subscribe button below. Upon subscription, you will be redirected to a page to set up the application.</p>
       </div>
 
       <div class="clickable" style="height: 9rem;">

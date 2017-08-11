@@ -23,7 +23,7 @@ permalink: /directory-authorization/
 
                 console.log(slug);
 
-                callback(slug);
+                /*callback(slug);*/
             }
 
         function authorization_redirect(slug) {
@@ -34,8 +34,11 @@ permalink: /directory-authorization/
        preauthenticate(slug, authorization_redirect);
     }
 </script>
-
-<form id="auth-form" class="clickable" onsubmit="requestAuth()">
-    <input id='slug' type='text' name='nation_slug' label='Nation Slug'>
-    <input id='submit' type='submit' value='Submit'>
-</form>
+<div id="main-container">
+     <div class="directoryPageBox clickable">
+        <p> To allow the directory application to access your database, please enter your NationBuilder slug into the box below and click submit.  Your NationBuilder slug is the first part of your URL at nationbuilder.com. For example, if your URL is bigriverwebdesign.nationbuilder.com, your slug would be bigriverwebdesign. </p>
+        <form id="auth-form" class="clickable" onsubmit="requestAuth()">
+            <input id='slug' type='text' name='nation_slug' label='Nation Slug'>
+            <input id='submit' type='submit' value='Submit'>
+        </form>
+    </div>

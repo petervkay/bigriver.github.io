@@ -3,7 +3,6 @@ title: Directory Success
 layout: page
 permalink: /directory-success/
 ---
-
 <script>
     function requestAuth() {
         event.preventDefault();
@@ -23,7 +22,7 @@ permalink: /directory-success/
 
                 console.log(slug);
 
-                callback(slug);
+                /*callback(slug);*/
             }
 
         function authorization_redirect(slug) {
@@ -38,14 +37,19 @@ permalink: /directory-success/
 <div id="main-container">
   <div class="directoryPageBox clickable">
     <h6>Transaction Successful</h6>
-    <p>Thank you! Your transaction was successful. To get the application set up, please send the following to <a href="info@bigriverwebdesign.com" style="color: #72453F; text-decoration:underline;">info@bigriverwebdesign.com</a>:</p>
+    <p>Thank you! Your transaction was successful. To get the application set up, please send the following to <a href="info@bigriverwebdesign.com">info@bigriverwebdesign.com</a>:</p>
 
     <ul>
+      <li>The size of your database</li>
       <li>Which searchable fields you would like included. Available fields are first name, last name, city, state and sex.&nbsp;All custom fields are supported and must already be created within your Nationbuilder settings.  Please let us know which of your custom fields you would like included in the directory.</li>
       <li>Your unique NationBuilder slug (if your site’s NationBuilder URL is mywebsite.nationbuilder.com, the slug is “my website”)</li>
+      <li>Whether you would like photos displayed on your directory </li>
+      <li>Whether you would like your directory to link to public profiles </li>
+      <li>Whether you would like your whole database searched or just a subsection of it</li>
+
     </ul>
 
-    <p> We will respond to your email with a line of code that you will include in the page template where you want the directory to be displayed.  In order to allow our authorize our application to access your database, please enter your NationBuilder slug in the box below and click "Authorize."</p>
+    <p> We will respond to your email with a block of code that you will include in the page template where you want the directory to be displayed.  In order to allow our authorize our application to access your database, please enter your NationBuilder slug in the box below and click "Authorize."</p>
 
     <form id="auth-form" class="clickable" onsubmit="requestAuth()" label='Authorize'>
       <input id='slug' type='text' name='nation_slug' label='Nation Slug'>

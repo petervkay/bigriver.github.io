@@ -23,6 +23,7 @@ permalink: /nationbuilder-directory/
           <li>Directory searchable by your choice of built-in or custom fields</li>
           <li>Contact form allowing users to contact people in your database without being able to view their email addresses</li>
           <li>Links to Nationbuilder public profiles</li>
+          <li>Supports searching either your entire database or a subsection of your database</li>
           <li>Centralized code base for all instances of the directory application allowing for rapid deployment and excellent stability</li>
           <li>Customized implementations available</li>
         </ul>
@@ -35,7 +36,7 @@ permalink: /nationbuilder-directory/
 
       <div class="clickable" style="margin-right: .5rem;">
         <h6>Pricing</h6>
-        <p class="padTop">For addition information, contact&nbsp;<a class="nbSearchLink" href="mailto:peter@bigriverwebdesign.com">peter@bigriverwebdesign.com.</a></p>
+        <p class="padTop">Our basic directory is available for $30/month. Custom implementations are available at additional cost. For addition information, contact&nbsp;<a class="nbSearchLink" href="mailto:peter@bigriverwebdesign.com">peter@bigriverwebdesign.com.</a></p>
         <br/>
         <p>To purchase application, please use the subscribe button below. Upon subscription, you will be redirected to a page to set up the application.</p>
       </div>

@@ -42,3 +42,4 @@ permalink: /directory-authorization/
             <input id='submit' type='submit' value='Submit'>
         </form>
     </div>
+</div>

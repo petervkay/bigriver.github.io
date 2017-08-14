@@ -45,7 +45,7 @@ permalink: /directory-success/
       <li>Your unique NationBuilder slug (if your site’s NationBuilder URL is mywebsite.nationbuilder.com, the slug is “my website”)</li>
       <li>Whether you would like photos displayed on your directory </li>
       <li>Whether you would like your directory to link to public profiles </li>
-      <li>Whether you would like your whole database searched or just a subsection of it</li>
+      <li>Whether you would like your whole database searched or just a subsection of it.  Currently, we can restrict your database to entries with a particular custom field value.  Please let us know what you are looking for and we can advise about the best way to get it done.</li>
 
     </ul>
 

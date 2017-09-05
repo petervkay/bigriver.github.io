@@ -77,7 +77,10 @@
 </html>
 
 <script>
-  var div = document.getElementById('photosphere-background');
+var div = document.getElementById('photosphere-background');
+var is_root = location.pathname == "/";
+console.log(is_root);
+if (is_root) {
   var PSV = new PhotoSphereViewer({
     panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
     container: div,
@@ -91,8 +94,21 @@
       long: -1.8
     } //radians!
   });
+  setTimeout(function(){ PSV.toggleAutorotate(); }, 10000);
 </script>
-
-<script>
-setTimeout(function(){ PSV.toggleAutorotate(); }, 10000);
+} else {
+  var PSV = new PhotoSphereViewer({
+    panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
+    container: div,
+    navbar: true,
+    anim_speed: '0',
+    loading_img: '{{site.baseurl}}/images/ring.svg',
+    mousewheel: false,
+    gyroscope: true,
+    default_position: {
+      lat: 0,
+      long: -1.8
+    } //radians!
+  });
+}
 </script>

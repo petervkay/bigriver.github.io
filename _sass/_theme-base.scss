@@ -140,11 +140,15 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
-#main, .wrapper-masthead {
+#main, #wrapper-masthead {
     position:absolute;
     pointer-events: none;
     max-width:none;
     width:100%;
+}
+
+.fixed {
+  position: fixed!important;
 }
 
 .clickable {
@@ -228,7 +232,7 @@ h6 {
 // .masthead
 //
 
-.wrapper-masthead {
+#wrapper-masthead {
     margin-bottom: 50px;
 }
 

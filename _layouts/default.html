@@ -44,16 +44,24 @@
 </head>
 
 <body>
+  <script>
+    function addClassFixed() {
+      $('#wrapper-masthead').addClass('fixed');
+    };
+    function removeClassFixed() {
+      $('#wrapper-masthead').removeClass('fixed');
+    };
+  </script>
   <div id="photosphere-background">
   </div>
-  <div class="wrapper-masthead">
+  <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
+        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" onclick="addClassFixed()"/></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
-          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}">{{ item.title }}</a> {% endif %} {% endfor %}
+          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}" onclick="removeClassFixed()">{{ item.title }}</a> {% endif %} {% endfor %}
         </nav>
       </header>
     </div>
@@ -81,6 +89,7 @@ var div = document.getElementById('photosphere-background');
 var is_root = location.pathname == "/";
 console.log(is_root);
 if (is_root) {
+  addClassFixed();
   var PSV = new PhotoSphereViewer({
     panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
     container: div,
@@ -91,11 +100,10 @@ if (is_root) {
     gyroscope: true,
     default_position: {
       lat: 0,
-      long: -1.8
+      long: -2.1
     } //radians!
   });
-  setTimeout(function(){ PSV.toggleAutorotate(); }, 10000);
-</script>
+  setTimeout(function(){ PSV.toggleAutorotate(); }, 11500);
 } else {
   var PSV = new PhotoSphereViewer({
     panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
@@ -107,7 +115,7 @@ if (is_root) {
     gyroscope: true,
     default_position: {
       lat: 0,
-      long: -1.8
+      long: -2.1
     } //radians!
   });
 }

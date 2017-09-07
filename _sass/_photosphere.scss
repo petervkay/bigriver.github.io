@@ -6,7 +6,7 @@
 }
 
 canvas {
-    cursor: all-scroll;
+    cursor: url('{{site.baseurl}}/images/all-scrollCursor.png'), all-scroll;
 }
 
 #photosphere-background img {

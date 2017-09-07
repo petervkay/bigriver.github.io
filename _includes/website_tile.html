@@ -1,5 +1,7 @@
 <div class='website_tile {{include.website[1].platform}} {{include.website[1].biztype}} clickable'>
-	<img class="siteImage" src="{{site.baseurl}}/images/screenshots/{{include.website[0]}}.png"/>
+	<div class="siteImageContainer">
+		<img class="siteImage" src="{{site.baseurl}}/images/screenshots/{{include.website[0]}}.png"/>
+	</div>
 	<div class='title' data-platformtag='{{include.website[1].platform}}' data-biztag='{{include.website[1].biztype}}' data-name='{{include.website[1].title}}' data-title="{{include.website[1].description}}" data-url='{{include.website[1].url}}' id='{{include.website[1].id}}' onclick="showIframe(event)">
 		<div class='tileHead'>{{include.website[1].title}}</div>
 	</div>
@@ -25,7 +27,7 @@ function showIframe(e) {
 		$(coverTarget).append( cover );
 		$(targetDiv).append( frame, sidebar);
 		$('#siteView').attr('src', article.dataset.url);
-		$('#iframeSidebar').append( '<p style="align-self: flex-end; cursor: pointer; position: fixed;" onclick="hideIframe(event)">X</p>');
+		$('#iframeSidebar').append( '<p style="margin-left: 13%; cursor: pointer; position: fixed;" onclick="hideIframe(event)">X</p>');
 		$('#iframeSidebar').append( '<h4 style="color: #72453F; text-align: center;">' + article.dataset.name + '</h4>');
 		$('#iframeSidebar').append( '<p style="font-size: 17px; margin-bottom: 1.75rem;">' + article.dataset.title + '</p>' );
 		$('#iframeSidebar').append( '<p class="sidetag">' + article.dataset.platformtag + '</p>' )

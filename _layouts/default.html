@@ -98,12 +98,12 @@ if (is_root) {
     loading_img: '{{site.baseurl}}/images/ring.svg',
     mousewheel: false,
     gyroscope: true,
+    onready: setTimeout(function(){ PSV.toggleAutorotate(); }, 11500),
     default_position: {
       lat: 0,
       long: -2.1
     } //radians!
   });
-  setTimeout(function(){ PSV.toggleAutorotate(); }, 11500);
 } else {
   var PSV = new PhotoSphereViewer({
     panorama: '{{ site.baseurl}}/images/newriversphere.jpg',

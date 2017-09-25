@@ -403,3 +403,43 @@ ul.dropdown-menu:hover {
 a.hoverNeighbor:hover + ul {
   display: inline-block;
 }
+
+div#helpr {
+  position: fixed;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  font-weight: bolder;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 0px 15px;
+  display: block;
+  border-radius: 100%;
+  margin: 15px;
+  color: rgba(255, 255, 255, .8);
+}
+
+div#help {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  color: rgba(255, 255, 255, .8);
+  bottom: 0;
+  right: 0;
+  margin: 5rem;
+  width: 20rem;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+div#exit {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 695px) {
+  div#helpr {
+    margin: 55px 15px;
+  }
+}

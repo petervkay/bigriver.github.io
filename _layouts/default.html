@@ -47,17 +47,39 @@
   <script>
     function addClassFixed() {
       $('#wrapper-masthead').addClass('fixed');
+      $('#helpr').show();
+      $('#help').hide();
     };
+
     function removeClassFixed() {
       $('#wrapper-masthead').removeClass('fixed');
+      $('#helpr').hide();
+      $('#help').hide();
     };
+
+    function showHelp() {
+      $('#help').show();
+      $('#helpr').hide();
+    }
+
+    function hideHelp() {
+      $('#help').hide();
+      $('#helpr').show();
+    }
+
+    document.addEventListener('mousedown', function(event) {
+      if (event.target.tagName === 'CANVAS' && location.origin + '/' == location.href) {
+        hideHelp();
+      }
+    });
+
   </script>
   <div id="photosphere-background">
   </div>
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" onclick="addClassFixed()"/></a>
+        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
@@ -66,7 +88,17 @@
       </header>
     </div>
   </div>
-
+  <div id="help" class="clickable" style="display: none;">
+    <div id="exit" onclick="hideHelp()">
+      X
+    </div>
+    <div id="helpText">
+      This photosphere image was taken on the banks of the Mississippi River. Click and drag to look around!
+    </div>
+  </div>
+  <div id="helpr" class="clickable" onclick="showHelp()">
+    ?
+  </div>
   <div id="main" role="main" class="container">
     {{ content }}
   </div>
@@ -85,38 +117,44 @@
 </html>
 
 <script>
-var div = document.getElementById('photosphere-background');
-var is_root = location.pathname == "/";
-console.log(is_root);
-if (is_root) {
-  addClassFixed();
-  var PSV = new PhotoSphereViewer({
-    panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
-    container: div,
-    navbar: true,
-    anim_speed: '2rpm',
-    loading_img: '{{site.baseurl}}/images/ring.svg',
-    mousewheel: false,
-    gyroscope: true,
-    onready: function(){setTimeout(function(){ PSV.toggleAutorotate(); }, 8300)},
-    default_position: {
-      lat: 0,
-      long: -2.1
-    } //radians!
-  });
-} else {
-  var PSV = new PhotoSphereViewer({
-    panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
-    container: div,
-    navbar: true,
-    anim_speed: '0',
-    loading_img: '{{site.baseurl}}/images/ring.svg',
-    mousewheel: false,
-    gyroscope: true,
-    default_position: {
-      lat: 0,
-      long: -2.1
-    } //radians!
-  });
-}
+  var div = document.getElementById('photosphere-background');
+  var is_root = location.pathname == "/";
+  console.log(is_root);
+  if (is_root) {
+    addClassFixed();
+    var PSV = new PhotoSphereViewer({
+      panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
+      container: div,
+      navbar: true,
+      anim_speed: '2rpm',
+      loading_img: '{{site.baseurl}}/images/ring.svg',
+      mousewheel: false,
+      gyroscope: true,
+      onready: function() {
+        setTimeout(function() {
+          PSV.toggleAutorotate();
+        }, 8300)
+      },
+      default_position: {
+        lat: 0,
+        long: -2.1
+      } //radians!
+    });
+  } else {
+    $('#helpr').hide();
+    var PSV = new PhotoSphereViewer({
+      panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
+      container: div,
+      navbar: true,
+      anim_speed: '0',
+      loading_img: '{{site.baseurl}}/images/ring.svg',
+      mousewheel: false,
+      gyroscope: true,
+      default_position: {
+        lat: 0,
+        long: -2.1
+      } //radians!
+    });
+  }
+
 </script>

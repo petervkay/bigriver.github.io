@@ -9,6 +9,7 @@ $(document).ready(function(){
 	function addActiveClass(elem){
 	    removeActiveClass();
 	    console.log(elem);
+			console.log($('#main-container').height())
 	    var element = document.querySelector("#" + elem);
 	    element.classList.add('active');
   	}

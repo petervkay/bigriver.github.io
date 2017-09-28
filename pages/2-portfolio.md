@@ -58,7 +58,7 @@ $(window).scroll(function() {
       requestContent("/page-content/services/index.html");
       document.title = "Big River Web Design | services";
 			console.log($('#main-container').height()+100);
-			$('html,body').scrollTop($('#main-container').height()+100);
+			$('html,body').scrollTop(50);
 			console.log($(window).scrollTop());
     }
   }

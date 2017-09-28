@@ -39,22 +39,26 @@
   <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.js"></script>
   <script src="{{site.baseurl}}/js/navigation.js"></script>
+  <!-- <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script> -->
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
 <body>
   <script>
+    // jQuery.scrollSpeed(100, 800, 'easeOutCubic');
     function addClassFixed() {
       $('#wrapper-masthead').addClass('fixed');
       $('#helpr').show();
       $('#help').hide();
+      $('html,body').scrollTop(0);
     };
 
     function removeClassFixed() {
       $('#wrapper-masthead').removeClass('fixed');
       $('#helpr').hide();
       $('#help').hide();
+      $('html,body').scrollTop(50);
     };
 
     function showHelp() {
@@ -72,6 +76,33 @@
         hideHelp();
       }
     });
+
+    $(window).scroll(function() {
+      if (location.origin + '/' == location.href) {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+          function requestContent(url) {
+            $("#main").load(url);
+          }
+
+          function removeActiveClass() {
+            $(links).removeClass('active');
+          }
+
+          function addActiveClass(elem) {
+            removeActiveClass();
+            console.log(elem);
+            var element = document.querySelector("#" + elem);
+            element.classList.add('active');
+          }
+          addActiveClass("about");
+          history.pushState("about", null, "/about/");
+          requestContent("/page-content/about/index.html");
+          document.title = "Big River Web Design | about";
+          removeClassFixed();
+        }
+      }
+    })
 
   </script>
   <div id="photosphere-background">

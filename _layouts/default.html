@@ -39,14 +39,12 @@
   <script src="{{site.baseurl}}/js/plugins/doT/doT.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/Photo-Sphere-Viewer/photo-sphere-viewer.js"></script>
   <script src="{{site.baseurl}}/js/navigation.js"></script>
-  <!-- <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script> -->
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
 <body>
   <script>
-    // jQuery.scrollSpeed(100, 800, 'easeOutCubic');
     function addClassFixed() {
       $('#wrapper-masthead').addClass('fixed');
       $('#helpr').show();
@@ -78,6 +76,7 @@
     });
 
     $(window).scroll(function() {
+      console.log($(window).scrollTop());
       if (location.origin + '/' == location.href) {
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 

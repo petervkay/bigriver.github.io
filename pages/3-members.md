@@ -47,7 +47,7 @@ $(window).scroll(function() {
       history.pushState("portfolio", null, "/portfolio/");
       requestContent("/page-content/portfolio/index.html");
       document.title = "Big River Web Design | portfolio";
-      removeClassFixed();
+      $('html,body').scrollTop(2300);
     }
   }
 })

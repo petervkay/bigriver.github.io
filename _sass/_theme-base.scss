@@ -157,6 +157,7 @@ img {
 
 #main {
     top:185px;
+    margin-bottom: 40rem;
 }
 
 //
@@ -199,6 +200,14 @@ h6 {
     img {
         border-radius: 50%;
     }
+}
+
+@media (max-width: 1000px) {
+  .img_text_tile {
+    img {
+      max-width: 62%;
+    }
+  }
 }
 
 @media (max-width: 480px) {

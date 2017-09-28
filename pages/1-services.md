@@ -54,7 +54,7 @@ $(window).scroll(function() {
       history.pushState("about", null, "/about/");
       requestContent("/page-content/about/index.html");
       document.title = "Big River Web Design | about";
-      removeClassFixed();
+      $('html,body').scrollTop(700);
     }
   }
 })

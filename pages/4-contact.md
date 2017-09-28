@@ -43,7 +43,7 @@ $(window).scroll(function() {
       history.pushState("members", null, "/members/");
       requestContent("/page-content/members/index.html");
       document.title = "Big River Web Design | members";
-      removeClassFixed();
+      $('html,body').scrollTop(1450);
     }
   }
 })

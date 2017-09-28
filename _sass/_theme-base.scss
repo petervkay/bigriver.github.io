@@ -201,6 +201,14 @@ h6 {
     }
 }
 
+@media (max-width: 1000px) {
+  .img_text_tile {
+    img {
+      max-width: 62%;
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .mosaic {
     flex-direction: column;

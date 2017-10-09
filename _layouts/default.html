@@ -45,7 +45,6 @@
 
 <body>
   <script>
-  console.log('updated');
     function addClassFixed() {
       $('#wrapper-masthead').addClass('fixed');
       $('#helpr').show();
@@ -120,18 +119,15 @@
 <script>
   var div = document.getElementById('photosphere-background');
   var is_root = location.pathname == "/";
-  console.log(is_root);
   if (is_root) {
     var startingLongitude = -2.1;
     var startingDuration = 4200;
-    console.log ($(window).width());
     if ($(window).width() <= 1039 && $(window).width() >= 696) {
       startingLongitude = -1.95;
     } else if ($(window).width() <= 695) {
       startingLongitude = -2.25;
       startingDuration = 6000;
     }
-    console.log(startingLongitude);
     addClassFixed();
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',

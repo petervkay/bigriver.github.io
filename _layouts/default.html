@@ -121,6 +121,16 @@
   var is_root = location.pathname == "/";
   console.log(is_root);
   if (is_root) {
+    var startingLongitude = -2.1;
+    var startingDuration = 4200;
+    console.log ($(window).width());
+    if ($(window).width() <= 1039 && $(window).width() >= 696) {
+      startingLongitude = -1.95;
+    } else if ($(window).width() <= 695) {
+      startingLongitude = -2.25;
+      startingDuration = 6000;
+    }
+    console.log(startingLongitude);
     addClassFixed();
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
@@ -133,11 +143,11 @@
       onready: function() {
         setTimeout(function() {
           PSV.toggleAutorotate();
-        }, 4200)
+        }, startingDuration)
       },
       default_position: {
         lat: -.25,
-        long: -2.1
+        long: startingLongitude
       } //radians!
     });
   } else {

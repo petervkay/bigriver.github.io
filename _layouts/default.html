@@ -118,6 +118,8 @@
 
 <script>
   var div = document.getElementById('photosphere-background');
+  console.log(location.pathname);
+  console.log('{{site.baseurl}}');
   var is_root = location.pathname == "{{site.baseurl}}";
   if (is_root) {
     var startingLongitude = -2.1;

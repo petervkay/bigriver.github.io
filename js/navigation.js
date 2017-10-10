@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 			if (isHome==false) {
 		    	var data = e.target.getAttribute('data-name');
-		   		var url = "{{site.baseurl}}/page-content/"+data+"/index.html";
+		   		var url = "/page-content/"+data+"/index.html";
 			    addActiveClass(data);
 			    history.pushState(data, null, "/"+data);
 			   // updateText(data);
@@ -48,7 +48,7 @@ $(document).ready(function(){
     	var data = e.state;
 
     	if (data!="home") {
-	    	var url = "{{site.baseurl}}/page-content/"+data+"/index.html";
+	    	var url = "/page-content/"+data+"/index.html";
 	    	addActiveClass(data);
 	    	requestContent(url);
 	      	document.title = "Big River Web Design | " + data;

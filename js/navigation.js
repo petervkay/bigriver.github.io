@@ -29,14 +29,14 @@ $(document).ready(function(){
 		    	var data = e.target.getAttribute('data-name');
 		   		var url = "{{site.baseurl}}/page-content/"+data+"/index.html";
 			    addActiveClass(data);
-			    history.pushState(data, null, "{{site.baseurl}}/"+data);
+			    history.pushState(data, null, "/"+data);
 			   // updateText(data);
 			    requestContent(url);
 			    document.title = "Big River Web Design | " + data;
 			} else {
 				removeActiveClass();
 				$("#main").empty();
-				history.pushState("home", null, "{{site.baseurl}}/")
+				history.pushState("home", null, "/")
 				document.title = "Big River Web Design"
 			}
 

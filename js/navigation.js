@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log('{{site.baseurl}}')
+	console.log('{{site.url}}')
 	links = $(".top-nav a, a.home");
 
 	function removeActiveClass(){

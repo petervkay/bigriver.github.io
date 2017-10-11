@@ -23,4 +23,30 @@ permalink: /contact/
 $(document).ready(function() {
     $('#main-container').fadeIn();
 });
+
+$(window).scroll(function() {
+  if (location.origin + '/contact/' == location.href) {
+    function removeActiveClass() {
+      $(links).removeClass('active');
+    }
+    function requestContent(url) {
+      $("#main").load(url);
+    }
+    function addActiveClass(elem) {
+      removeActiveClass();
+      console.log(elem);
+      var element = document.querySelector("#" + elem);
+      element.classList.add('active');
+    }
+    if ($(window).scrollTop() == 0) {
+      addActiveClass("members");
+      history.pushState("members", null, "/members/");
+      requestContent("/page-content/members/index.html");
+      document.title = "Big River Web Design | members";
+      $('html,body').scrollTop(50);
+      console.log($(window).scrollTop());
+    }
+  }
+})
+
 </script>

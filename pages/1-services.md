@@ -28,4 +28,36 @@ group: top-nav
 $(document).ready(function() {
     $('#main-container').fadeIn();
 });
+
+$(window).scroll(function() {
+  if (location.origin + '/services/' == location.href) {
+    function removeActiveClass() {
+      $(links).removeClass('active');
+    }
+    function requestContent(url) {
+      $("#main").load(url);
+    }
+    function addActiveClass(elem) {
+      removeActiveClass();
+      console.log(elem);
+      var element = document.querySelector("#" + elem);
+      element.classList.add('active');
+    }
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+      addActiveClass("portfolio");
+      history.pushState("portfolio", null, "/portfolio/");
+      requestContent("/page-content/portfolio/index.html");
+      document.title = "Big River Web Design | portfolio";
+      removeClassFixed();
+    } else if ($(window).scrollTop() == 0) {
+      addActiveClass("about");
+      history.pushState("about", null, "/about/");
+      requestContent("/page-content/about/index.html");
+      document.title = "Big River Web Design | about";
+      $('html,body').scrollTop(50);
+      console.log($(window).scrollTop());
+    }
+  }
+})
+
 </script>

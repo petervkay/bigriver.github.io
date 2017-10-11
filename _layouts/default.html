@@ -49,12 +49,14 @@
       $('#wrapper-masthead').addClass('fixed');
       $('#helpr').show();
       $('#help').hide();
+      $('html,body').scrollTop(0);
     };
 
     function removeClassFixed() {
       $('#wrapper-masthead').removeClass('fixed');
       $('#helpr').hide();
       $('#help').hide();
+      $('html,body').scrollTop(50);
     };
 
     function showHelp() {
@@ -72,6 +74,34 @@
         hideHelp();
       }
     });
+
+    $(window).scroll(function() {
+      console.log($(window).scrollTop());
+      if (location.origin + '/' == location.href) {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+          function requestContent(url) {
+            $("#main").load(url);
+          }
+
+          function removeActiveClass() {
+            $(links).removeClass('active');
+          }
+
+          function addActiveClass(elem) {
+            removeActiveClass();
+            console.log(elem);
+            var element = document.querySelector("#" + elem);
+            element.classList.add('active');
+          }
+          addActiveClass("about");
+          history.pushState("about", null, "/about/");
+          requestContent("/page-content/about/index.html");
+          document.title = "Big River Web Design | about";
+          removeClassFixed();
+        }
+      }
+    })
 
   </script>
   <div id="photosphere-background">

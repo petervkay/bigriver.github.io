@@ -68,7 +68,7 @@
     }
 
     document.addEventListener('mousedown', function(event) {
-      if (event.target.tagName === 'CANVAS' && location.origin + '/' == location.href) {
+      if (event.target.tagName === 'CANVAS' && location.origin + '{{site.baseurl}}/' == location.href) {
         hideHelp();
       }
     });

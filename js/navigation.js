@@ -1,3 +1,6 @@
+---
+---
+
 $(document).ready(function(){
 	console.log(' {{ site.baseurl }}/home ')
 	links = $(".top-nav a, a.home");

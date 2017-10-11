@@ -77,7 +77,7 @@
 
     $(window).scroll(function() {
       console.log($(window).scrollTop());
-      console.log(location.origin);
+      console.log(location.origin + '{{site.baseurl}}');
       console.log(location.href);
       if (location.origin + '{{site.baseurl}}' == location.href) {
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {

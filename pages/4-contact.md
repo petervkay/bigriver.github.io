@@ -25,7 +25,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
-  if (location.origin + '/contact/' == location.href) {
+  if (location.origin + '{{site.baseurl}}/contact/' == location.href) {
     function removeActiveClass() {
       $(links).removeClass('active');
     }
@@ -40,7 +40,7 @@ $(window).scroll(function() {
     }
     if ($(window).scrollTop() == 0) {
       addActiveClass("members");
-      history.pushState("members", null, "/members/");
+      history.pushState("members", null, "{{site.baseurl}}/members/");
       requestContent("/page-content/members/index.html");
       document.title = "Big River Web Design | members";
       $('html,body').scrollTop(50);

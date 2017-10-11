@@ -30,7 +30,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
-  if (location.origin + '/services/' == location.href) {
+  if (location.origin + '{{site.baseurl}}/services/' == location.href) {
     function removeActiveClass() {
       $(links).removeClass('active');
     }
@@ -45,14 +45,14 @@ $(window).scroll(function() {
     }
     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
       addActiveClass("portfolio");
-      history.pushState("portfolio", null, "/portfolio/");
-      requestContent("/page-content/portfolio/index.html");
+      history.pushState("portfolio", null, "{{site.baseurl}}/portfolio/");
+      requestContent("{{site.baseurl}}/page-content/portfolio/index.html");
       document.title = "Big River Web Design | portfolio";
       removeClassFixed();
     } else if ($(window).scrollTop() == 0) {
       addActiveClass("about");
-      history.pushState("about", null, "/about/");
-      requestContent("/page-content/about/index.html");
+      history.pushState("about", null, "{{site.baseurl}}/about/");
+      requestContent("{{site.baseurl}}/page-content/about/index.html");
       document.title = "Big River Web Design | about";
       $('html,body').scrollTop(50);
       console.log($(window).scrollTop());

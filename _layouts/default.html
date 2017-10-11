@@ -120,6 +120,8 @@
   var div = document.getElementById('photosphere-background');
   var is_root = location.pathname == "{{site.baseurl}}";
   console.log(location.pathname);
+  console.log(is_root);
+  console.log('{{site.baseurl}}');
   if (is_root) {
     var startingLongitude = -2.1;
     var startingDuration = 4200;

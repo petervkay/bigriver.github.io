@@ -70,7 +70,7 @@
     }
 
     document.addEventListener('mousedown', function(event) {
-      if (event.target.tagName === 'CANVAS' && location.origin + '/' == location.href) {
+      if (event.target.tagName === 'CANVAS' && location.origin + '{{site.baseurl}}/' == location.href) {
         hideHelp();
       }
     });
@@ -111,7 +111,7 @@
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
+        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-Blue.svg" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
@@ -150,9 +150,16 @@
 
 <script>
   var div = document.getElementById('photosphere-background');
-  var is_root = location.pathname == "/";
-  console.log(is_root);
+  var is_root = location.pathname == "{{site.baseurl}}/";
   if (is_root) {
+    var startingLongitude = -2.1;
+    var startingDuration = 4200;
+    if ($(window).width() <= 1039 && $(window).width() >= 696) {
+      startingLongitude = -1.95;
+    } else if ($(window).width() <= 695) {
+      startingLongitude = -2.25;
+      startingDuration = 6000;
+    }
     addClassFixed();
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
@@ -165,11 +172,11 @@
       onready: function() {
         setTimeout(function() {
           PSV.toggleAutorotate();
-        }, 8300)
+        }, startingDuration)
       },
       default_position: {
-        lat: 0,
-        long: -2.1
+        lat: -.25,
+        long: startingLongitude
       } //radians!
     });
   } else {

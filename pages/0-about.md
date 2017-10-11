@@ -18,7 +18,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
-  if (location.origin + '/about/' == location.href) {
+  if (location.origin + '{{site.baseurl}}/about/' == location.href) {
     function removeActiveClass() {
       $(links).removeClass('active');
     }
@@ -35,14 +35,14 @@ $(window).scroll(function() {
         element.classList.add('active');
       }
       addActiveClass("services");
-      history.pushState("services", null, "/services/");
-      requestContent("/page-content/services/index.html");
+      history.pushState("services", null, "{{site.baseurl}}/services/");
+      requestContent("{{site.baseurl}}/page-content/services/index.html");
       document.title = "Big River Web Design | services";
       removeClassFixed();
     } else if ($(window).scrollTop() == 0) {
       removeActiveClass();
       $("#main").empty();
-      history.pushState("home", null, "/");
+      history.pushState("home", null, "{{site.baseurl}}/");
       document.title = "Big River Web Design";
       addClassFixed();
     }

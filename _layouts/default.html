@@ -97,8 +97,8 @@
             element.classList.add('active');
           }
           addActiveClass("about");
-          history.pushState("about", null, "/about/");
-          requestContent("/page-content/about/index.html");
+          history.pushState("about", null, "{{site.baseurl}}/about/");
+          requestContent("{{site.baseurl}}/page-content/about/index.html");
           document.title = "Big River Web Design | about";
           removeClassFixed();
         }

@@ -1,3 +1,6 @@
+---
+---
+
 $(document).ready(function(){
 	console.log(' {{ site.baseurl }}/home ')
 	links = $(".top-nav a, a.home");
@@ -27,16 +30,16 @@ $(document).ready(function(){
 
 			if (isHome==false) {
 		    	var data = e.target.getAttribute('data-name');
-		   		var url = "/page-content/"+data+"/index.html";
+		   		var url = "{{site.baseurl}}/page-content/"+data+"/index.html";
 			    addActiveClass(data);
-			    history.pushState(data, null, "/"+data);
+			    history.pushState(data, null, "{{site.baseurl}}/"+data);
 			   // updateText(data);
 			    requestContent(url);
 			    document.title = "Big River Web Design | " + data;
 			} else {
 				removeActiveClass();
 				$("#main").empty();
-				history.pushState("home", null, "/")
+				history.pushState("home", null, "{{site.baseurl}}/")
 				document.title = "Big River Web Design"
 			}
 
@@ -48,7 +51,7 @@ $(document).ready(function(){
     	var data = e.state;
 
     	if (data!="home") {
-	    	var url = "/page-content/"+data+"/index.html";
+	    	var url = "{{site.baseurl}}/page-content/"+data+"/index.html";
 	    	addActiveClass(data);
 	    	requestContent(url);
 	      	document.title = "Big River Web Design | " + data;

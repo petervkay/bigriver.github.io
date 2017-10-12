@@ -75,11 +75,19 @@ $(document).ready(function(){
 
 	function upScroll(previousPage) {
 		$('#main-container').fadeOut();
-		addActiveClass(previousPage);
-		history.pushState(previousPage, null, "{{site.baseurl}}/" + previousPage + "/");
-		requestContent("{{site.baseurl}}/page-content/" + previousPage + "/index.html");
-		document.title = "Big River Web Design | " + previousPage;
-		$('html,body').scrollTop(80);
+		if (previousPage === 'home') {
+			removeActiveClass();
+			$("#main").empty();
+			history.pushState("home", null, "{{site.baseurl}}/");
+			document.title = "Big River Web Design";
+			addClassFixed();
+		} else {
+			addActiveClass(previousPage);
+			history.pushState(previousPage, null, "{{site.baseurl}}/" + previousPage + "/");
+			requestContent("{{site.baseurl}}/page-content/" + previousPage + "/index.html");
+			document.title = "Big River Web Design | " + previousPage;
+			$('html,body').scrollTop(80);
+		}
 	}
 
 	$(window).scroll(function() {
@@ -92,12 +100,7 @@ $(document).ready(function(){
 	    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 				downScroll('services');
 	    } else if ($(window).scrollTop() == 0) {
-				$('#main-container').fadeOut();
-	      removeActiveClass();
-	      $("#main").empty();
-	      history.pushState("home", null, "{{site.baseurl}}/");
-	      document.title = "Big River Web Design";
-	      addClassFixed();
+				upScroll('home');
 	    }
 	  } else if (location.origin + '{{site.baseurl}}/services/' == location.href) {
 	    if ($(window).scrollTop() + $(window).height() == $(document).height()) {

@@ -14,6 +14,7 @@ navigation_weight: 1
 
 <script>
 $(document).ready(function() {
+  console.log($('#main-container').height());
     $('#main-container').fadeIn();
 });
 </script>

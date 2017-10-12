@@ -26,6 +26,7 @@ group: top-nav
 
 <script>
 $(document).ready(function() {
+  console.log($('#main-container').height());
     $('#main-container').fadeIn();
 });
 </script>

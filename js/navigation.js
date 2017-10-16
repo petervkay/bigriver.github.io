@@ -74,7 +74,7 @@ $(document).ready(function(){
 	}
 
 	function upScroll(previousPage) {
-		$('#main-container').fadeOut();
+		$('#main-container').hide();
 		if (previousPage === 'home') {
 			removeActiveClass();
 			$("#main").empty();

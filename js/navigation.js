@@ -86,7 +86,7 @@ $(document).ready(function(){
 			history.pushState(previousPage, null, "{{site.baseurl}}/" + previousPage + "/");
 			requestContent("{{site.baseurl}}/page-content/" + previousPage + "/index.html");
 			document.title = "Big River Web Design | " + previousPage;
-			$('html,body').scrollTop(80);
+			$('html,body').scrollTop(575);
 		}
 	}
 

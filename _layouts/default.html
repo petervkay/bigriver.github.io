@@ -49,14 +49,14 @@
       $('#wrapper-masthead').addClass('fixed');
       $('#helpr').show();
       $('#help').hide();
-      $('html,body').scrollTop(0);
+      $('html,body').scrollTop(575);
     };
 
     function removeClassFixed() {
       $('#wrapper-masthead').removeClass('fixed');
       $('#helpr').hide();
       $('#help').hide();
-      $('html,body').scrollTop(5);
+      $('html,body').scrollTop(575);
     };
 
     function showHelp() {
@@ -151,6 +151,7 @@
     });
   } else {
     $('#helpr').hide();
+    $('html,body').scrollTop(575);
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
       container: div,

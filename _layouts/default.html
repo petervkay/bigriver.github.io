@@ -74,7 +74,9 @@
     });
 
   </script>
-  <img src="{{site.baseurl}}/images/336.gif"
+  <div id="loaderHolder">
+    <img src="{{site.baseurl}}/images/336.gif"/>
+  </div>
   <div id="photosphere-background">
   </div>
   <div id="wrapper-masthead">
@@ -135,10 +137,14 @@
       container: div,
       navbar: true,
       anim_speed: '2rpm',
-      loading_img: '{{site.baseurl}}/images/336.gif',
       mousewheel: false,
       gyroscope: true,
       onready: function() {
+        setTimeout(function() {
+          $('#photosphere-background').fadeTo('slow', 1);
+          $('#loaderHolder').hide();
+          console.log('fading in')
+        }, 1750)
         setTimeout(function() {
           PSV.toggleAutorotate();
         }, startingDuration)
@@ -155,9 +161,13 @@
       container: div,
       navbar: true,
       anim_speed: '0',
-      loading_img: '{{site.baseurl}}/images/336.gif',
       mousewheel: false,
       gyroscope: true,
+      onready: function() {
+        $('#photosphere-background').fadeTo('slow', 1);
+        console.log('fading in')
+        $('#loaderHolder').hide();
+      },
       default_position: {
         lat: 0,
         long: -2.1

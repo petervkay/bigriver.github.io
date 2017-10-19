@@ -33,6 +33,8 @@
   <meta name="theme-color" content="#ffffff">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
   <script src="{{site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
@@ -140,6 +142,8 @@
       mousewheel: false,
       gyroscope: true,
       onready: function() {
+        $('#photosphere-background').fadeTo('slow', 1);
+        console.log('fading in')
         setTimeout(function() {
           PSV.toggleAutorotate();
         }, startingDuration)
@@ -160,6 +164,10 @@
       loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel: false,
       gyroscope: true,
+      onready: function() {
+        $('#photosphere-background').fadeTo('slow', 1);
+        console.log('fading in')
+      },
       default_position: {
         lat: 0,
         long: -2.1

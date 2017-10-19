@@ -64,6 +64,30 @@ $(document).ready(function(){
 
 	// pageScroll code
 
+	var controller = new ScrollMagic.Controller();
+
+	new ScrollMagic.Scene({
+		duration: $(window).height(),
+		offset: 0
+	})
+	.on("update", function (e) {
+					 console.log(e.target.controller().info("scrollDirection"));
+					})
+	//				.on("enter leave", )
+					.addTo(controller)
+					.addIndicators()
+
+					var scene1 = new ScrollMagic.Scene({
+  offset: 0,
+  duration: 575, // pin element for the window height - 1
+  reverse: true // allows the effect to trigger when scrolled in the reverse direction
+})
+.setPin("#wrapper-masthead") // the element we want to pin
+.addTo(controller);
+
+
+	var pageArray = ["/", "/about/", "/services/", "/portfolio/", "/members/", "/contact/"];
+
 	function downScroll(nextPage) {
 		$('#main-container').hide();
 		addActiveClass(nextPage);
@@ -86,12 +110,11 @@ $(document).ready(function(){
 			history.pushState(previousPage, null, "{{site.baseurl}}/" + previousPage + "/");
 			requestContent("{{site.baseurl}}/page-content/" + previousPage + "/index.html");
 			document.title = "Big River Web Design | " + previousPage;
-			$('html,body').scrollTop(750);
+			$('html,body').scrollTop(575);
 		}
 	}
 
 	$(window).scroll(function() {
-		console.log($(window).scrollTop());
 		if (location.origin + '{{site.baseurl}}/' == location.href) {
 			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 				downScroll('about');

@@ -12,6 +12,7 @@ body {
     background: $white;
     font: 18px/1.4 $sans-font-family;
     color: $darkGray;
+    background-color: $lightGray;
 }
 
 .container {
@@ -241,10 +242,6 @@ h6 {
 //
 // .masthead
 //
-
-#wrapper-masthead {
-    margin-top: 575px;
-}
 
 .masthead {
     padding: 20px 0;

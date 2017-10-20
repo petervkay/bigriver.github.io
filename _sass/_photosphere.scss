@@ -72,8 +72,12 @@ canvas {
   border-style: solid;
   opacity: 1;
   border-radius: 50%;
-  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, .5) infinite;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, .5) infinite;
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100px,-100px);
 }
 .lds-ripple div:nth-child(1) {
   border-color: #f5f5f5;

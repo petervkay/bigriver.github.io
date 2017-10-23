@@ -104,7 +104,7 @@
       This photosphere image was taken on the banks of the Mississippi River. Click and drag to look around!
     </div>
   </div>
-  <div id="helpr" class="clickable" onclick="showHelp()">
+  <div id="helpr" class="clickable" style="display: none;" onclick="showHelp()">
     ?
   </div>
   <div id="main" role="main" class="container">
@@ -128,7 +128,6 @@
       startingLongitude = -2.25;
       startingDuration = 6000;
     }
-    addClassFixed();
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
       container: div,
@@ -138,6 +137,7 @@
       gyroscope: true,
       onready: function() {
         setTimeout(function() {
+          addClassFixed();
           $('#photosphere-background').fadeTo('slow', 1);
           $('#loaderHolder').hide();
           console.log('fading in')

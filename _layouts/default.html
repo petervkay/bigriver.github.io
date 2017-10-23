@@ -83,7 +83,7 @@
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-Blue.svg" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
+        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-white.png" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
@@ -100,21 +100,13 @@
       This photosphere image was taken on the banks of the Mississippi River. Click and drag to look around!
     </div>
   </div>
-  <div id="helpr" class="clickable" onclick="showHelp()">
+  <div id="helpr" class="clickable" style="display: none;" onclick="showHelp()">
     ?
   </div>
   <div id="main" role="main" class="container">
     {{ content }}
   </div>
-  <!--
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-           Don't think footer is necessary in this design
-         </footer>
-      </div>
-    </div>
-    -->
+
   {% include analytics.html %}
 </body>
 
@@ -132,18 +124,22 @@
       startingLongitude = -2.25;
       startingDuration = 6000;
     }
-    addClassFixed();
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
       container: div,
       navbar: true,
       anim_speed: '2rpm',
-      loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel: false,
       gyroscope: true,
       onready: function() {
         $('#photosphere-background').fadeTo('slow', 1);
         console.log('fading in')
+        setTimeout(function() {
+          addClassFixed();
+          $('#photosphere-background').fadeTo('slow', 1);
+          $('#loaderHolder').hide();
+          console.log('fading in')
+        }, 1750)
         setTimeout(function() {
           PSV.toggleAutorotate();
         }, startingDuration)
@@ -161,12 +157,12 @@
       container: div,
       navbar: true,
       anim_speed: '0',
-      loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel: false,
       gyroscope: true,
       onready: function() {
         $('#photosphere-background').fadeTo('slow', 1);
         console.log('fading in')
+        $('#loaderHolder').hide();
       },
       default_position: {
         lat: 0,

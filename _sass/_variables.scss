@@ -5,6 +5,7 @@
 
 // Theme Colors
 $theme-color-one: #164DE5; //blue
+$theme-color-two:  #7a8aa9; //grey-blue
 
 // Grays
 $black: #000;
@@ -15,13 +16,13 @@ $lightGray: #eee;
 $white: #fff;
 
 // Element Colors
-$link-color:$black;
+$link-color:$white;
 
 
 // Font stacks
 $sans-font-family: "Source Sans Pro", Helvetica, Trebuchet, sans-serif;
 $serif-font-family: Georgia, serif;
-$sans-bold-weight: 700;;
+$sans-bold-weight: 700;
 
 // Backgrounds
 $trans-white:rgba(255,255,255,.8);

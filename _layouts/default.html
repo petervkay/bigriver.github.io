@@ -47,15 +47,9 @@
 
 <body>
   <script>
-    function addClassFixed() {
-      $('#wrapper-masthead').addClass('fixed');
-      $('#helpr').show();
-      $('#help').hide();
-      $('html,body').scrollTop(575);
-    };
 
-    function removeClassFixed() {
-      $('#wrapper-masthead').removeClass('fixed');
+    function noHelp() {
+      $('#main').css("margin-bottom", "40rem");
       $('#helpr').hide();
       $('#help').hide();
       $('html,body').scrollTop(575);
@@ -67,6 +61,8 @@
     }
 
     function hideHelp() {
+      $('html,body').scrollTop(0);
+      $('#main').css("margin-bottom", "0");
       $('#help').hide();
       $('#helpr').show();
     }
@@ -77,17 +73,24 @@
       }
     });
   </script>
-
+  <div id="loaderHolder">
+    <div class="lds-css ng-scope">
+      <div style="width:100%;height:100%" class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
   <div id="photosphere-background">
   </div>
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-white.png" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
+        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-white.png" alt="{{ site.name }}" onclick="hideHelp()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
-          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}" onclick="removeClassFixed()">{{ item.title }}</a> {% endif %} {% endfor %}
+          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}" onclick="noHelp()">{{ item.title }}</a> {% endif %} {% endfor %}
         </nav>
       </header>
     </div>
@@ -132,11 +135,10 @@
       mousewheel: false,
       gyroscope: true,
       onready: function() {
-        $('#photosphere-background').fadeTo('slow', 1);
         console.log('fading in')
         setTimeout(function() {
-          addClassFixed();
           $('#photosphere-background').fadeTo('slow', 1);
+          hideHelp();
           $('#loaderHolder').hide();
           console.log('fading in')
         }, 1750)

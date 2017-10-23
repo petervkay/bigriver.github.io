@@ -94,7 +94,7 @@ $(document).ready(function(){
 		history.pushState(nextPage, null, "{{site.baseurl}}/" + nextPage + "/");
 		requestContent("{{site.baseurl}}/page-content/"+ nextPage +"/index.html");
 		document.title = "Big River Web Design | " + nextPage;
-		removeClassFixed();
+		noHelp();
 	}
 
 	function upScroll(previousPage) {
@@ -104,7 +104,7 @@ $(document).ready(function(){
 			$("#main").empty();
 			history.pushState("home", null, "{{site.baseurl}}/");
 			document.title = "Big River Web Design";
-			addClassFixed();
+			hideHelp();
 		} else {
 			addActiveClass(previousPage);
 			history.pushState(previousPage, null, "{{site.baseurl}}/" + previousPage + "/");

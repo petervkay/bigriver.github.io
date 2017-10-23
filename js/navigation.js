@@ -75,7 +75,7 @@ $(document).ready(function(){
 					})
 	//				.on("enter leave", )
 					.addTo(controller)
-					.addIndicators()
+			//		.addIndicators()
 
 					var scene1 = new ScrollMagic.Scene({
   offset: 0,

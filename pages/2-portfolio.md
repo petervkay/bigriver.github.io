@@ -27,10 +27,12 @@ group: top-nav
 	</div>
 </div>
 
+<script src='{{site.baseurl}}/js/portfolio.js'></script>
+
 <script>
 $(document).ready(function() {
-	console.log($('#main-container').height());
-    $('#main-container').fadeIn();
+    if ($('#photosphere-background').children().length !== 0) {
+      $("#main-container").fadeIn();
+    }
 });
 </script>
-<script src='{{site.baseurl}}/js/portfolio.js'></script>

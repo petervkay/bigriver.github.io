@@ -144,7 +144,6 @@
           $('#photosphere-background').fadeTo('slow', 1);
           hideHelp();
           $('#loaderHolder').hide();
-          console.log('fading in')
         }, 1750)
         setTimeout(function() {
           PSV.toggleAutorotate();
@@ -170,6 +169,7 @@
         noHelp();
         console.log('fading in')
         $('#loaderHolder').hide();
+        $('#main-container').fadeIn();
       },
       default_position: {
         lat: 0,

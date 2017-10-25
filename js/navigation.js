@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 	function requestContent(url){
 		$("#main").load(url);
+		$("#main-container").fadeIn();
 	}
 
 

@@ -46,7 +46,7 @@ permalink: /nationbuilder-directory/
         <ul>
           <li><a class="nbSearchLink" href="http://piratenation.alumninations.com/directory">http://piratenation.alumninations.com/directory</a></li>
           <li><a class="nbSearchLink" href="http://menashaalumni.alumninations.com/directory">http://menashaalumni.alumninations.com/directory</a></li>
-          <li><a class="nbSearchLink" href="http://cedarburgbulldogs.alumninations.com/search">http://cedarburgbulldogs.alumninations.com/search</a></li>
+          <li><a class="nbSearchLink" href="http://cedarburgbulldogs.alumninations.com/directory">http://cedarburgbulldogs.alumninations.com/directory</a></li>
         </ul>
       </div>
       <br/>

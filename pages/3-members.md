@@ -19,6 +19,8 @@ permalink: /members/
 
 <script>
 $(document).ready(function() {
-    $('#main-container').fadeIn();
+    if ($('#photosphere-background').children().length !== 0) {
+      $("#main-container").fadeIn();
+    }
 });
 </script>

@@ -140,7 +140,6 @@
           addClassFixed();
           $('#photosphere-background').fadeTo('slow', 1);
           $('#loaderHolder').hide();
-          console.log('fading in')
         }, 1750)
         setTimeout(function() {
           PSV.toggleAutorotate();
@@ -162,8 +161,8 @@
       gyroscope: true,
       onready: function() {
         $('#photosphere-background').fadeTo('slow', 1);
-        console.log('fading in')
         $('#loaderHolder').hide();
+        $('#main-container').fadeIn();
       },
       default_position: {
         lat: 0,

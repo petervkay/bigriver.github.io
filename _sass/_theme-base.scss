@@ -332,7 +332,7 @@ nav.top-nav {
         letter-spacing: 1px;
         transition: .3s color;
         &.active, &:hover {
-            color: $gray;
+            text-decoration: underline;
             transition: .3s color;
         }
 

@@ -49,11 +49,7 @@
   <script>
 
     function noHelp() {
-      if (location.origin + '{{site.baseurl}}/contact/' == location.href) {
-        $('#main').css("padding-bottom", "20rem");
-      } else {
-        $('#main').css("padding-bottom", "40rem");
-      }
+      $('#main').css("padding-bottom", "20rem");
       $('#helpr').hide();
       $('#help').hide();
       $('html,body').scrollTop(575);

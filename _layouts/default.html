@@ -33,6 +33,8 @@
   <meta name="theme-color" content="#ffffff">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
   <script src="{{site.baseurl}}/js/plugins/three.js/build/three.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/D.js/lib/D.min.js"></script>
   <script src="{{site.baseurl}}/js/plugins/uEvent/uevent.min.js"></script>
@@ -45,18 +47,12 @@
 
 <body>
   <script>
-    function addClassFixed() {
-      $('#wrapper-masthead').addClass('fixed');
-      $('#helpr').show();
-      $('#help').hide();
-      $('html,body').scrollTop(0);
-    };
 
-    function removeClassFixed() {
-      $('#wrapper-masthead').removeClass('fixed');
+    function noHelp() {
+      $('#main').css("padding-bottom", "20rem");
       $('#helpr').hide();
       $('#help').hide();
-      $('html,body').scrollTop(50);
+      $('html,body').scrollTop(575);
     };
 
     function showHelp() {
@@ -65,55 +61,36 @@
     }
 
     function hideHelp() {
+      $('html,body').scrollTop(0);
+      $('#main').css("padding-bottom", "1rem");
       $('#help').hide();
       $('#helpr').show();
     }
 
     document.addEventListener('mousedown', function(event) {
-      if (event.target.tagName === 'CANVAS' && location.origin + '/' == location.href) {
+      if (event.target.tagName === 'CANVAS' && location.origin + '{{site.baseurl}}/' == location.href) {
         hideHelp();
       }
     });
-
-    $(window).scroll(function() {
-      console.log($(window).scrollTop());
-      if (location.origin + '/' == location.href) {
-        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-
-          function requestContent(url) {
-            $("#main").load(url);
-          }
-
-          function removeActiveClass() {
-            $(links).removeClass('active');
-          }
-
-          function addActiveClass(elem) {
-            removeActiveClass();
-            console.log(elem);
-            var element = document.querySelector("#" + elem);
-            element.classList.add('active');
-          }
-          addActiveClass("about");
-          history.pushState("about", null, "/about/");
-          requestContent("/page-content/about/index.html");
-          document.title = "Big River Web Design | about";
-          removeClassFixed();
-        }
-      }
-    })
-
   </script>
+  <div id="loaderHolder">
+    <div class="lds-css ng-scope">
+      <div style="width:100%;height:100%" class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
   <div id="photosphere-background">
   </div>
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar clickable home"><img src="{{ site.avatar }}" alt="{{ site.name }}" onclick="addClassFixed()" /></a>
+        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-white.png" alt="{{ site.name }}" onclick="hideHelp()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
-          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}" onclick="removeClassFixed()">{{ item.title }}</a> {% endif %} {% endfor %}
+          <a href="{{ item.url | absolute_url }}" class="{{ css_class }} clickable" id="{{item.title | downcase}}" data-name="{{item.title | downcase}}" onclick="noHelp()">{{ item.title }}</a> {% endif %} {% endfor %}
         </nav>
       </header>
     </div>
@@ -126,21 +103,13 @@
       This photosphere image was taken on the banks of the Mississippi River. Click and drag to look around!
     </div>
   </div>
-  <div id="helpr" class="clickable" onclick="showHelp()">
+  <div id="helpr" class="clickable" style="display: none;" onclick="showHelp()">
     ?
   </div>
   <div id="main" role="main" class="container">
     {{ content }}
   </div>
-  <!--
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-           Don't think footer is necessary in this design
-         </footer>
-      </div>
-    </div>
-    -->
+
   {% include analytics.html %}
 </body>
 
@@ -148,38 +117,56 @@
 
 <script>
   var div = document.getElementById('photosphere-background');
-  var is_root = location.pathname == "/";
-  console.log(is_root);
+  var is_root = location.pathname == "{{site.baseurl}}/";
   if (is_root) {
-    addClassFixed();
+    var startingLongitude = -2.1;
+    var startingDuration = 4200;
+    if ($(window).width() <= 1039 && $(window).width() >= 696) {
+      startingLongitude = -1.95;
+    } else if ($(window).width() <= 695) {
+      startingLongitude = -2.25;
+      startingDuration = 6000;
+    }
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
       container: div,
       navbar: true,
       anim_speed: '2rpm',
-      loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel: false,
       gyroscope: true,
       onready: function() {
+        console.log('fading in')
+        setTimeout(function() {
+          $('#photosphere-background').fadeTo('slow', 1);
+          hideHelp();
+          $('#loaderHolder').hide();
+        }, 1750)
         setTimeout(function() {
           PSV.toggleAutorotate();
-        }, 8300)
+        }, startingDuration)
       },
       default_position: {
-        lat: 0,
-        long: -2.1
+        lat: -.25,
+        long: startingLongitude
       } //radians!
     });
   } else {
     $('#helpr').hide();
+    $('html,body').scrollTop(575);
     var PSV = new PhotoSphereViewer({
       panorama: '{{ site.baseurl}}/images/newriversphere.jpg',
       container: div,
       navbar: true,
       anim_speed: '0',
-      loading_img: '{{site.baseurl}}/images/ring.svg',
       mousewheel: false,
       gyroscope: true,
+      onready: function() {
+        $('#photosphere-background').fadeTo('slow', 1);
+        noHelp();
+        console.log('fading in')
+        $('#loaderHolder').hide();
+        $('#main-container').fadeIn();
+      },
       default_position: {
         lat: 0,
         long: -2.1

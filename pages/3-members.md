@@ -19,38 +19,8 @@ permalink: /members/
 
 <script>
 $(document).ready(function() {
-    $('#main-container').fadeIn();
+    if ($('#photosphere-background').children().length !== 0) {
+      $("#main-container").fadeIn();
+    }
 });
-
-$(window).scroll(function() {
-  if (location.origin + '/members/' == location.href) {
-    function removeActiveClass() {
-      $(links).removeClass('active');
-    }
-    function requestContent(url) {
-      $("#main").load(url);
-    }
-    function addActiveClass(elem) {
-      removeActiveClass();
-      console.log(elem);
-      var element = document.querySelector("#" + elem);
-      element.classList.add('active');
-    }
-    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-      addActiveClass("contact");
-      history.pushState("contact", null, "/contact/");
-      requestContent("/page-content/contact/index.html");
-      document.title = "Big River Web Design | contact";
-      removeClassFixed();
-    } else if ($(window).scrollTop() == 0) {
-      addActiveClass("portfolio");
-      history.pushState("portfolio", null, "/portfolio/");
-      requestContent("/page-content/portfolio/index.html");
-      document.title = "Big River Web Design | portfolio";
-      $('html,body').scrollTop(50);
-      console.log($(window).scrollTop());
-    }
-  }
-})
-
 </script>

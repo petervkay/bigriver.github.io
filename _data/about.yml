@@ -1,6 +1,15 @@
 one:
-  text: >
-    ###### We do more than just build websites.
+  left: >
+    We envision.
+  right: >
+    We work with clients from the beginning, helping them figure out what their website is for, what should be on their website, what technologies they should be using, and developing attractive and effective designs that make their vision a reality.
 two:
-  text: >
-    ###### We vision. We create. We support.
+  left: >
+    We create.
+  right: >
+    We have experience across a wide range of development platforms.  This allows us to do everything from building out simple and affordable sites using tools like Squarespace and Weebly, to building out more customized websites with WordPress, to creating complex applications with platforms like NodeJS and Django.
+three:
+  left: >
+    We support.
+  right: >
+    These days every organization needs a tech person, but doesn't necessarily have the resources to keep one on staff.  We provide ongoing support to our clients through trainings, small website modifications, maintenance, and general technology support and consulting.

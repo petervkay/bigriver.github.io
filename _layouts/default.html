@@ -139,6 +139,7 @@
         setTimeout(function() {
           addClassFixed();
           $('#photosphere-background').fadeTo('slow', 1);
+          $('#main').fadeIn("slow");
           $('#loaderHolder').hide();
           console.log('fading in')
         }, 1750)
@@ -164,6 +165,7 @@
         $('#photosphere-background').fadeTo('slow', 1);
         console.log('fading in')
         $('#loaderHolder').hide();
+        $('#main').fadeIn("slow");
       },
       default_position: {
         lat: 0,
@@ -171,5 +173,4 @@
       } //radians!
     });
   }
-
 </script>

@@ -6,7 +6,7 @@ permalink: /members/
 ---
 
 <div id="main-container">
-  <div class="mosaic">
+  <div class="mosaic members">
     {% for member in site.data.members %}
       {% include img_text_tile.html content=member %}
     {% endfor %}

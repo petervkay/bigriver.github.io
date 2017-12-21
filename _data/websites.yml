@@ -1,3 +1,11 @@
+rlmarts:
+    url: https://www.rlmartstudio.com
+    id: rlmarts
+    title: Ricardo Levins Morales Art Studio
+    description: We loved working with Ricardo's shop to build them a new website.  They do a lot of business online, shipping out orders nationally on a daily basis.  We revamped their WordPress + WooCommerce site, streamlining its performance, giving it a completely new custom design, and customizing WooCommerce through a combination of configuring third party plugins, writing code into the theme, and building custom plugins.
+    platform: WORDPRESS
+    biztype: BUSINESS
+
 mnacademics:
     url: http://mnacademics.org
     id: mnacademics

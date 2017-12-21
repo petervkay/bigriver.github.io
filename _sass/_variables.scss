@@ -4,8 +4,9 @@
 //
 
 // Theme Colors
-$theme-color-one: #164DE5;
+$theme-color-one: #164DE5; //blue
 $theme-color-two:  #7a8aa9; //grey-blue
+$theme-color-three: #72453F; //maroon
 
 // Grays
 $black: #000;
@@ -25,13 +26,14 @@ $serif-font-family: Georgia, serif;
 $sans-bold-weight: 700;
 
 // Backgrounds
-$trans-white:rgba(255,255,255,.8);
+$trans-white:rgba(255,255,255,.7);
+$trans-gray: transparentize($gray,.4);
 // Buttons
 $success-button-background:#b1f9b1;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 695px) {
+  @media screen and (max-width: 800px) {
     @content;
   }
 }

@@ -8,7 +8,7 @@ navigation_weight: 1
 
 <div id="main-container">
   {% for blurb in site.data.about %}
-    {% include text_tile.html content=blurb %}
+    {% include about_tile.html content=blurb %}
   {% endfor %}
 </div>
 

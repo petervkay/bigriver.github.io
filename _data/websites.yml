@@ -6,6 +6,14 @@ rlmarts:
     platform: WORDPRESS
     biztype: BUSINESS
 
+mpd150:
+    url: https://www.mpd150.com
+    id: mpd150
+    title: MPD150
+    description: MPD150 is a project advocating for a future without policing, putting together a report on the past, present, and future of policing.  Our task was to build out their website, which was a digital version of the report, almost like an online museum.  To accomplish this, we used WordPress, working with an outside designer from the project, building a custom theme, and building several custom plugins to handle the different types of data in the report.
+    platform: WORDPRESS
+    biztype: NON-PROFIT
+
 mnacademics:
     url: http://mnacademics.org
     id: mnacademics

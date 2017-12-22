@@ -17,7 +17,10 @@ $(document).ready(function() {
   }
 
   function requestContent(url) {
-    $("#main").load(url);
+    $.get( url, function( data ) {
+        $( "#main" ).html( data );
+         $(window).scrollTop(0);
+    });
   }
 
 

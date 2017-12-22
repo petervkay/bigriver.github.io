@@ -17,13 +17,23 @@ function hideSpinner() {
 	$(spinner).remove();
 }
 function showIframe(e) {
+
+
 	console.log(e.target);
 	var targetDiv = document.getElementById('websiteViewer');
 	var coverTarget = document.getElementById('coverTarget');
 	var article = document.getElementById(e.currentTarget.id);
+
+	///disable iframe on small and medium devices
+	if (window.innerWidth < 1200) {
+		window.location.href=article.dataset.url;
+		return;
+	}	
+
+
 	var frame = `<iframe id="siteView" style="background-color: white; position: fixed; z-index: 500; top: 5%; left: 1%; border-bottom: 2px outset lightgrey; border-left: 2px outset lightgrey; border-top: 2px outset lightgrey;" width = "83%" height = "90%"></iframe>`;
 	var sidebar = '<div id="iframeSidebar"></div>';
-	var cover = '<div id="cover" style="z-index: 400; top: -500px; left: -10px; background-color: rgba(0, 0, 0, 0.7); display: block; width: 900%; height: 900%; position: absolute;" onclick="hideIframe()"></div>'
+	var cover = '<div id="cover" class="clickable" style="z-index: 400; top: -500px; left: -10px; background-color: rgba(0, 0, 0, 0.7); display: block; width: 100%; height: 100%; position: absolute;" onclick="hideIframe()"></div>'
 		$(coverTarget).append( cover );
 		$(targetDiv).append( frame, sidebar);
 		$('#siteView').attr('src', article.dataset.url);
@@ -41,10 +51,14 @@ function showIframe(e) {
     }
 }
 function hideIframe() {
+	console.log('hide iframe')
 	var cover = document.getElementById('cover');
 	var targetDiv = document.getElementById('websiteViewer');
 	$(cover).remove();
 	$(targetDiv).empty();
 	targetDiv.style.display = 'none';
+
 }
+
+
 </script>

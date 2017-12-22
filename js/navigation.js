@@ -20,6 +20,10 @@ $(document).ready(function() {
     $("#main").load(url);
   }
 
+
+
+  //links navigation
+
   $(links).click(function(e) {
 
     e.preventDefault();
@@ -45,6 +49,8 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
+  //history event navigation
+
   window.addEventListener('popstate', function(e) {
 
     var data = e.state;
@@ -62,7 +68,7 @@ $(document).ready(function() {
     }
   });
 
-  // pageScroll code
+  
 
   
 

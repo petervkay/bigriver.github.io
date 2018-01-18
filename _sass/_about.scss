@@ -12,7 +12,6 @@
 	.left {	
 		width:25%;
 		background-color:$trans-white;
-		color:$theme-color-one;
 		padding:20px;
 		display: flex;
 	    flex-direction: column;
@@ -29,11 +28,14 @@
 
 	.right {
 		width:75%;
-		background-color:$trans-gray;
+		background-color:$theme-color-three;
+		opacity:.8;
 		padding:20px;
+
 
 		p {
 			color:$white;
+			font-size:18px;
 		}
 
 		@include mobile {

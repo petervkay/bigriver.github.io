@@ -31,6 +31,7 @@ canvas {
     z-index: -1;
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(to right, rgba(99,127,182,1) 0%, rgba(147,166,201,1) 78%, rgba(186,196,216,1) 100%);
 
     > div > div:last-child {
         display: none;

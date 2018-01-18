@@ -13,6 +13,7 @@ body {
     background: linear-gradient(to right, rgba(99,127,182,1) 0%, rgba(147,166,201,1) 78%, rgba(186,196,216,1) 100%);
     font: 18px/1.4 $sans-font-family;
     color: $darkGray;
+    min-height:100vh;
 }
 
 .container {
@@ -160,7 +161,7 @@ img {
 #main {
 
     top:185px;
-    display:none; //hidden until photosphere loads
+/*     display:none; */ //hidden until photosphere loads
 }
 
 //
@@ -245,7 +246,8 @@ h6 {
 //
 
 .masthead {
-    display:none; //fades in with Photosphere
+/*     display:none; */ //fades in with Photosphere
+    display:none;
     padding: 20px 0;
 
     @include mobile {
@@ -256,7 +258,7 @@ h6 {
 .site-avatar {
     display: inline-block;
     width: 150px;
-    margin-right: 15px;
+    margin-right: 50px;
 
     @include mobile {
         float: none;
@@ -422,7 +424,7 @@ div#helpr {
   font-size: 30px;
   background-color: rgba(0, 0, 0, .5);
   padding: 0px 15px;
-  display: none;
+/*   display: none; */
   border-radius: 100%;
   margin: 15px;
   color: rgba(255, 255, 255, .8);
@@ -460,7 +462,7 @@ div#exit {
   width: 100%;
   height: 100%;
   text-align:center;
-  display:flex;
+  display:none;
   flex-direction:column;
   justify-content: space-evenly;
 

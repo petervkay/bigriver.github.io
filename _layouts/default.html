@@ -87,7 +87,7 @@
   <div id="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo-white.png" alt="{{ site.name }}" onclick="hideHelp()" /></a>
+        <a href="{{ site.baseurl }}" class="site-avatar clickable home"><img src="{{site.baseurl}}/images/BigRiverLogo_withWeb.png" alt="{{ site.name }}" onclick="hideHelp()" /></a>
 
         <nav class="top-nav">
           {% for item in site.pages %} {% if item.group == "top-nav" %} {% assign css_class = '' %} {% if page.url == item.url %} {% assign css_class = 'active' %} {% endif %}
@@ -137,7 +137,7 @@
       gyroscope: true,
       onready: function() {
         setTimeout(function() {
-          $('#photosphere-background').fadeTo(800, 1);
+          $('#photosphere-background').fadeTo('slow', 1);
           hideHelp();
           $('#main').fadeIn(800);
           $('#loaderHolder').fadeOut(800);
@@ -180,4 +180,6 @@
       } //radians!
     });
   }
+
+
 </script>

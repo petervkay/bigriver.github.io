@@ -1,3 +1,13 @@
 .mosaic.members .img_text_tile img {
 	width:80%;
 }
+
+.img_text_tile.bottomText {
+	float: none;
+    display: block;
+    margin: 40px auto;
+
+    p {
+    	font-size:26px;
+    }
+}

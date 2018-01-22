@@ -1,19 +1,19 @@
 pvk:
   text: >
-    **Peter VanKoughnett** is a musician, activist, gardener, and computer buff with strong skills in CSS, Jquery, PHP, WordPress, Nationbuilder, Python, and Django.
+    **Peter VanKoughnett** is a full-stack web developer who founded and manages Big River Web Design.  He specializes in WordPress and NationBuilder with experience in Django, React, Express and Jekyll.
   imgalt: Peter VanKoughnett
+
+al:
+  text: >
+    **Andrew S. Lentz** is a front-end developer experienced in JavaScript, CSS, jQuery and React.
+  imgalt: Andrew S. Lentz
+
+ess:
+  text: >
+    **Erica Seltzer-Schultz** is a web designer, content manager, writer, and editor. She specializes in visioning, project management and helping people and organizations share their stories through the web.
+  imgalt: Erica Seltzer-Schultz  
 
 js:
   text: >
     **Justin Sengly** is a graphic designer, photographer, and videographer specializing in all things related to branding and identity.
   imgalt: Justin Sengly
-
-al:
-  text: >
-    **Andrew S. Lentz** is a musician, actor and yogi with a great love for stories and a voracious appetite for tea. His primary experience is in JavaScript, CSS, jQuery and React.
-  imgalt: Andrew S. Lentz
-
-ess:
-  text: >
-    **Erica Seltzer-Schultz** is an oral historian, writer, editor, web designer and content manager who specializes in WordPress and Squarespace.
-  imgalt: Erica Seltzer-Schultz

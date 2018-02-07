@@ -14,7 +14,7 @@ permalink: /contact/
           <input type="text" name="phone_number" placeholder="phone"><br>
           <textarea placeholder="enter your question or a description of your project here:" rows="4" cols="63" name="comment" form="bigriverform"></textarea><br>
           <input type="hidden" name="__redirect" value="https://petervkay.github.io/bigriver.github.io/">
-          <input type="submit" value="Send">
+          <input id="formSubmit" type="button" value="Send" onclick="hideButton()">
       </form>
   </div>
 </div>
@@ -25,4 +25,8 @@ $(document).ready(function() {
       $("#main-container").fadeIn();
     }
 });
+function hideButton() {
+  $('#formSubmit').hide();
+  $("#bigriverform").append("<p style='padding-bottom: 10px;'>Thank you, your message has been sent!</p>");
+}
 </script>

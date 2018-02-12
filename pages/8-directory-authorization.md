@@ -23,7 +23,7 @@ permalink: /directory-authorization/
 
                 console.log(slug);
 
-                /*callback(slug);*/
+                callback(slug);
             }
 
         function authorization_redirect(slug) {

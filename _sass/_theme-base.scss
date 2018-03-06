@@ -64,6 +64,10 @@ p {
   font-size: 16px;
 }
 
+nav a {
+  color:white;
+}
+
 a {
     color: $link-color;
     text-decoration: none;
@@ -321,7 +325,6 @@ nav.top-nav {
 
     a {
         margin-left: 20px;
-        color: $link-color;
         text-align: right;
         letter-spacing: 1px;
         transition: .3s color;
@@ -332,7 +335,6 @@ nav.top-nav {
 
         @include mobile {
             margin: 0 10px;
-            color: $link-color;
         }
     }
 }

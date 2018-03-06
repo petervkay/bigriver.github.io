@@ -7,6 +7,7 @@
 $theme-color-one: #164DE5; //blue
 $theme-color-two:  #7a8aa9; //grey-blue
 $theme-color-three: #72453F; //maroon
+$theme-color-four: #6588d1; //sky blue
 
 // Grays
 $black: #000;
@@ -17,7 +18,7 @@ $lightGray: #eee;
 $white: #fff;
 
 // Element Colors
-$link-color:$white;
+$link-color:$theme-color-four;
 
 
 // Font stacks

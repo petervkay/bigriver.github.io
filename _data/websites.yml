@@ -1,3 +1,19 @@
+glacier:
+    url: https://www.glaciercontactimprov.com/
+    id: glacier
+    title: GLACIER Contact Improv
+    description: This was a quick revamp of an existing site.  We updated their content, created a new registration system, and gave the site a more modern design.
+    platform: WIX
+    biztype: NON-PROFIT
+
+hjc:
+    url: https://www.hjcmn.org
+    id: hjcmn
+    title: Housing Justice Center
+    description: We collaborated with content specialist and designer Ccarolyn Szczepanski to create this site using the Divi theme. The main challenge of developing this site was figuring out a sensible way to organize and present their large amount of content.
+    platform: WORDPRESS
+    biztype: NON-PROFIT
+    
 rlmarts:
     url: https://www.rlmartstudio.com
     id: rlmarts

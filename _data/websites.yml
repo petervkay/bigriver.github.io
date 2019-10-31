@@ -1,3 +1,11 @@
+roiCalculator:
+    url: https://www.precisionairproducts.com/payback/
+    id: roiCalculator
+    title: ROI Calculator
+    description: This is a React application embedded into Precision Air's WordPress site which allows their sales reps to demonstrate to hospotals that their product is worth the investment.
+    platform: WORDPRESS
+    biz-type: BUSINESS
+
 glacier:
     url: https://www.glaciercontactimprov.com/
     id: glacier

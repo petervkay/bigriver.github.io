@@ -1,3 +1,11 @@
+repFinder:
+    url:https://www.precisionairproducts.com/rep-finder/
+    id: repFinder
+    title: Rep Finder
+    description: This a jQuery feature embedded in Precision Air's website which allows users to find a nearby sales rep.
+    platform: WORDPRESS
+    biz-type: BUSINESS
+    
 roiCalculator:
     url: https://www.precisionairproducts.com/payback/
     id: roiCalculator

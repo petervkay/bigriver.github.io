@@ -19,7 +19,7 @@ glacier:
     id: glacier
     title: GLACIER Contact Improv
     description: This was a quick revamp of an existing site.  We updated their content, created a new registration system, and gave the site a more modern design.
-    platform: WIX
+    platform: WEEBLY
     biztype: NON-PROFIT
 
 hjc:

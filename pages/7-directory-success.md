@@ -15,7 +15,7 @@ permalink: /directory-success/
 
                 $.ajax({
                     type: "GET",
-                    url: "http://www.nbdirectory.site/preauthenticate",
+                    url: "https://www.nbdirectory.site/preauthenticate",
                     data: data,
                     crossDomain: true,
                 });
